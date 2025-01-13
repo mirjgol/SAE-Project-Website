@@ -1,0 +1,182 @@
+/* *********************************
+  IMPORTS
+  ************************************ */
+  @import url(../css/variables.css);
+  @import url(../css/typography.css);
+  
+  /* *********************************
+    SMALL RESET
+    ************************************ */
+  
+  *::before,
+  *::after,
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* *********************************
+      GENERAL
+      ************************************ */
+  
+  html {
+    font-size: 62.5%;
+   
+  }
+
+    /* *********************************
+      HEADER
+      ************************************ */
+
+  
+
+    /* *********************************
+      LOGO
+      ************************************ */
+
+    .logo-container{
+ height: var(--header-height);
+
+    }
+
+.logo{
+  max-height:100%;
+}
+
+/* *********************************
+      HERO SECTION
+      ************************************ */
+
+
+
+
+/* *********************************
+       SLIDER SECTION
+      ************************************ */
+
+.slider-section{
+  position:absolute;
+  width:100vw;
+  height: 100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+} 
+
+.slider-container{
+position:absolute;
+inset:3.5rem 30rem 3.5rem 30rem; 
+background:black;
+
+}
+
+.slider-container .slider-item{
+  position:absolute;
+  top:82%;
+  left: 1%;
+  transform: translateY(-50%);
+  width: 18rem;
+  height:24rem;
+  border-radius: 1.5rem;
+  transition:0.3s;
+  background-size: cover;
+  background-position: center;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.slider-container .slider-item:nth-child(1),
+.slider-container .slider-item:nth-child(2)
+
+{position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  transform: translateY(0);
+
+}
+
+.slider-container .slider-item:nth-child(3){
+  left: calc(50% + 18rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(4){
+  left: calc(50% + 38rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(5){
+  left: calc(50% + 58rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(6){
+  left: calc(50% + 78rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(7){
+  left: calc(50% + 98rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(8){
+  left: calc(50% + 118rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(9){
+  left: calc(50% + 138rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(10){
+  left: calc(50% + 158rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(11){
+  left: calc(50% + 178rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(12){
+  left: calc(50% + 198rem);
+  background-size: cover;
+}
+.slider-container .slider-item:nth-child(13){
+  left: calc(50% + 218rem);
+  background-size: cover;
+  opacity:0;
+}
+
+.slider-buttons{
+  position: absolute;
+  bottom: 0rem;
+left: -25rem;
+  display:flex;
+  gap: 2rem;
+}
+
+.slider-buttons span{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: black;
+  color:white;
+  border-radius: 50%;
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
