@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/main.css" rel="stylesheet">
+  <link href="css/typography.css" rel="stylesheet">
+  <link href="css/queries.css" rel="stylesheet">
   <title>Nähatelier Fokus Fina</title>
   <script src="javascript/slider.js" defer></script>
+  <script src="javascript/hamburger-menu.js" defer></script>
   <link rel="icon" type="image/x-icon" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
   
 </head>
 <body>
@@ -23,42 +29,44 @@
 
 <!-- *** NAVIGATION *** -->
 
-    <!-- <nav class="main-navigation">
+<nav>
 
-      <ul class="main-navigation-list">
+  <div class="logo-container">
+    <img class="logo" loading="lazy" src="images/logo.svg" alt="Logo Fokus Fina" >
+  </div> 
 
-<li><a class="main-navigation-link" href="index.html">HOME</a></li>
+  <div class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
 
-<li><a class="main-navigation-link">ANGEBOT</a></li>
 
-<li><a class="main-navigation-link">PROJEKTE</a></li>
 
-<li><a class="main-navigation-link">GALERIE</a></li>
 
-<li><a class="main-navigation-link">KONTAKT</a></li>
+<div class="off-screen-navigation">
+
+      <ul class="off-screen-menu">
+
+<li><a class="off-screen-link" href="index.html">HOME</a></li>
+
+<li><a class="off-screen-link">ANGEBOT</a></li>
+
+<li><a class="off-screen-link">PROJEKTE</a></li>
+
+<li><a class="off-screen-link">GALERIE</a></li>
+
+<li><a class="off-screen-link">KONTAKT</a></li>
 
       </ul>
 
-    </nav> -->
+ </div>
 
   </header>
 
   <main>
 
-    <!-- <section class="hero-section">
-
-      <picture class="hero-img-container">
-        <source src="images/titelbild-green.webp " type="image/webp" />
-
-        <img
-          class="hero-img"
-          loading="lazy"
-          src="images/titelbild-green.JPG"
-          alt="Serafina in genähtem Kleid vor einem Spiegel"
-        />
-      </picture>
-
-    </section> -->
 
   </main>
 
@@ -88,7 +96,7 @@
 
 <div class="slider-item" style="background-image: url(./images/slider-hat-inside.webp), url(images/slider-hat-inside.JPG);"></div>
 
-<div class="slider-item" style="background-image: url(./images/slider-hat-side.webp), url(images/slider-hat-side.JPG);"></div>
+<!-- <div class="slider-item" style="background-image: url(./images/slider-hat-side.webp), url(images/slider-hat-side.JPG);"></div> -->
 
 <div class="slider-buttons">
   <span class="previous"><</span>
@@ -100,6 +108,5 @@
 
   </section>
 
-  
 </body>
 </html>
