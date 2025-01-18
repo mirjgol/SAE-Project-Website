@@ -20,7 +20,7 @@
       .off-screen-link{
         font-family: "Merienda-Regular", sans-serif;
         font-size:1.4rem;
-        color: black;
+        color:var(--darkest-color-tone);
       }
       
         

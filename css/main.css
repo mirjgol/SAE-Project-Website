@@ -28,12 +28,10 @@
       HEADER
       ************************************ */
 .header{
- height:100vh;
- background-image: url("images/titelbild-green-hochformat.jpg");
-background-size:contain;
-background-repeat: no-repeat;
-
+  height: 6rem;
+  background-color: var(--soft-green);
 }
+
 
   
 
@@ -41,21 +39,29 @@ background-repeat: no-repeat;
       NAVIGATION
       ************************************ */
 nav{
-  padding:0.5rem;
+  height: 100%;
+  padding:0.8rem;
   display:flex;
-background-color: var(--soft-green);
+  justify-content: center;
+  align-items: center;
 }
+
+
+    /* *********************************
+      LOGO
+      ************************************ */
 
 .logo-container{
   display: flex;
-  justify-content: center;
-  max-width:100%;
+ height:6rem;
+ padding: 0.1rem;
 }
 
-.logo{
- width: 100%;
 
-}
+
+    /* *********************************
+      HAMBURGER MENU
+      ************************************ */
 
 .hamburger-menu{
   height: 5rem;
@@ -72,7 +78,7 @@ background-color: var(--soft-green);
   height:0.3rem;
   width:80%;
   border-radius:2.5rem;
-  background-color:black;
+  background-color:var(--darkest-color-tone);
   position: absolute;
   top:50%;
   left:50%;
@@ -158,23 +164,22 @@ opacity: 80%;
 }
 
 
-    /* *********************************
-      LOGO
-      ************************************ */
-
-    .logo-container{
-width:5rem;
- justify-content: space-around;
-
-    }
-
-.logo{
-  max-height:100%;
-}
 
 /* *********************************
       HERO SECTION
       ************************************ */
+
+.hero-img-container{
+  max-width:100%;
+  height:auto;
+}
+
+.hero-img{
+  max-width:100%;
+  height:auto;
+}
+
+
 
 
 
@@ -296,7 +301,7 @@ opacity: 0;
   align-items: center;
   width: 5rem;
   height: 5rem;
-  background: black;
+  background-color: var(--darkest-color-tone);
   color:white;
   border-radius: 50%;
   cursor:pointer;
