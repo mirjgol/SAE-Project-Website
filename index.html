@@ -64,16 +64,17 @@
   <main>
 
     <section class="hero-section">
-      <picture class="hero-img-container">
-        <source src="images/titelbild-green-hochformat.jpg"/>
 
-        <img
-          class="hero-img"
-          loading="lazy"
-          src="images/titelbild-green-hochformat.jpg"
-          alt="Weisses Kleid vor Spiegel"
-        />
-      </picture>
+
+      <div class="hero-container">
+    
+        <div class="hero-text"><span>Willkommen im Nähatelier Fokus Fina</span><button>zum Angebot</button></div>
+
+       
+      </div>
+
+
+
     </section>
 
 
@@ -113,6 +114,98 @@
   <span class="next">></span>
 </div>
 
+
+
+  </section>
+
+  <section class="form-section">
+
+
+    <form class="contact-form">
+
+      <div class="title-box">
+        <h2 class="form-title">Kontaktiere mich</h2>
+        <picture class="contact-form-img-box"
+          ><source src="images/slider-dress-grey-hood.webp" type="image/webp" />
+
+          <img
+            class="contact-form-img"
+            loading="lazy"
+            src="images/slider-dress-grey-hood.JPG"
+            alt="Figur Drache"
+          />
+        </picture>
+      </div>
+
+    
+<div class="anrede-box">
+
+    <label class="form-label" for="anrede">Anrede</label>
+
+    <select id="anrede" name="">
+
+      <option value="male">Herr</option>
+      <option value="female">Frau</option>
+      <option value="neutral">Neutrale Anrede</option>
+
+    </select>
+
+</div>
+
+
+     <div class="first-name-box">
+      <label class="form-label" for="first-name">Vorname </label>
+      <input class="form-input" type="text" name="" id="first-name" />
+    </div> 
+
+    <div class="last-name-box">
+      <label class="form-label" for="last-name">Nachname</label>
+      <input class="form-input" type="text" name="" id="last-name" />
+    </div>
+
+    <div class="street-box">
+
+      <div class="street-name-box"> <label class="form-label" for="street-name">Strasse</label>
+      <input class="form-input form-input-street" type="text" name="" id="streetname" /></div>
+
+      <div class="street-number-box">
+      <label class="form-label" for="housenumber">Nr.</label>
+      <input class="form-input form-input-street-number" type="text" name="" id="housenumber" />
+      </div>
+  
+    </div>
+
+
+    <div class="plz-box"><label class="form-label" for="postleitzahl">Postleitzahl</label>
+      <input class="form-input" type="text" name="" id="postleitzahl" />
+    </div>
+      
+    <div class="ort-box">     <label class="form-label" for="location">Ort</label>
+      <input class="form-input" type="text" name="" id="location" />
+    </div>
+ 
+    <div class="email-box">  <label class="form-label" for="email">E-Mail Adresse</label>
+      <input class="form-input" type="email" name="" id="email" />
+    </div>
+    
+<div class="nachricht-box">
+      <label class="form-label" for="message" type="text"
+        >Deine Nachricht</label
+      >
+      <textarea
+        class="form-input"
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+      ></textarea>
+</div>
+
+      <button class="button-form button" type="submit" id="button-form">Absenden</button>
+
+
+
+    </form>
 
 
   </section>

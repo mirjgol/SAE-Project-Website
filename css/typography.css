@@ -7,6 +7,24 @@
     src: url(../fonts/Merienda-Regular.ttf);
   }
 
+
+  @font-face {
+    font-family: "Overlock-Regular";
+    src: url(../fonts/Overlock-Regular.ttf);
+  }
+
+
+
+      /* *********************************
+      BODY
+      ************************************ */
+body{
+  font-family: var(--main-text-font-family);
+  font-size: 1.6rem;
+
+
+}
+
       /* *********************************
       HEADER
       ************************************ */
@@ -22,5 +40,19 @@
         font-size:1.4rem;
         color:var(--darkest-color-tone);
       }
+
+       /* *********************************
+      FORM
+      ************************************ */
+.form-input{
+  font-family: var(--main-text-font-family);
+}
+.form-label{
+  font-weight: bold;
+}
+
+
+
+
       
         

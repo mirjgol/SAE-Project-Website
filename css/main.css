@@ -24,6 +24,11 @@
     font-size: 62.5%;
   }
 
+  body{
+    font-size: 16px;
+
+  }
+
     /* *********************************
       HEADER
       ************************************ */
@@ -169,14 +174,20 @@ opacity: 80%;
       HERO SECTION
       ************************************ */
 
-.hero-img-container{
-  max-width:100%;
-  height:auto;
+
+.hero-section{
+  background-color: #0f1b07;
+  height: 100vh;
+  width:100vw;
+ 
 }
 
-.hero-img{
-  max-width:100%;
-  height:auto;
+.hero-text{
+  height:100vh;
+  background-image: url(../images/background-hamburger-menu-bw.JPG);
+  background-size: cover;
+  aspect-ratio: 2/3;
+  background-repeat: none;
 }
 
 
@@ -189,7 +200,7 @@ opacity: 80%;
       ************************************ */
 
 .slider-section{
-  position:absolute;
+  position:relative;
   width:100vw;
   height: 100vh;
   overflow:hidden;
@@ -311,6 +322,61 @@ opacity: 0;
   opacity:0.5;
 }
 
+/* *********************************
+       CONTACT FORM 
+      ************************************ */
+
+.anrede-box,
+.first-name-box, .last-name-box, .plz-box, .ort-box, .email-box, .nachricht-box{
+  margin-bottom:1.5rem;
+  display:flex;
+  flex-direction: column;
+}
+
+
+.form-title,.contact-form-img{
+  margin-bottom:1.5rem;
+}
+.street-box{
+  gap:0.2rem;
+  display:flex;
+  margin-bottom:3rem;
+}
+.street-number-box, .street-name-box{
+  display:flex;
+  flex-direction: column;
+}
+
+.street-number-box{
+  width:20%;
+  
+}
+.street-name-box{
+  width:80%;
+}
+
+
+.form-section{
+margin: 10rem 0 10rem 0;
+margin:2rem;
+padding:2rem;
+border-radius: 1.5rem;
+background-color: var(--soft-green);
+}
+
+
+.contact-form-img-box{
+  width: 5rem;
+  height:auto;
+}
+
+.contact-form-img{
+  padding:2rem;
+  max-width:100%;
+  height:auto;
+  border-radius: 1rem;
+  box-shadow: 1rem 0.5rem 5rem 0rem grey inset;
+}
 
 
 
