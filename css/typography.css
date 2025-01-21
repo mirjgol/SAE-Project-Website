@@ -22,9 +22,15 @@ body{
   font-family: var(--main-text-font-family);
   font-size: 1.6rem;
 
-
 }
 
+      /* *********************************
+      GENERAL
+      ************************************ */
+
+      button{
+ font-family: Merienda-Medium";;
+      }
       /* *********************************
       HEADER
       ************************************ */
@@ -49,6 +55,10 @@ body{
 }
 .form-label{
   font-weight: bold;
+}
+
+.error-message{
+  font-family: var(--main-text-font-family);
 }
 
 

@@ -25,11 +25,19 @@
   }
 
   body{
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   button{
     cursor:pointer;
+    padding:1rem;
+    border:none;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+  }
+  button:hover{
+    background-color: var(--normal-green);
+   
   }
 
     /* *********************************
@@ -330,10 +338,21 @@ opacity: 0;
       ************************************ */
 
 .anrede-box,
-.first-name-box, .last-name-box, .plz-box, .ort-box, .email-box, .nachricht-box{
-  margin-bottom:1rem;
+.first-name-box, .last-name-box, .plz-box, .ort-box, .email-box {
+  margin-bottom:0.6rem;
   display:flex;
   flex-direction: column;
+}
+
+.nachricht-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+}
+
+.form-label{
+  margin-bottom: 0.1rem;
 }
 
 
@@ -382,11 +401,18 @@ background-color: var(--soft-green);
 }
 
 .error-message {
-  color: rgb(196, 9, 9);
-  font-size: 1rem;
+  color: var(--error-red-form-validation);  
   margin-top: 0.5rem;
   display: flex;
 }
+
+.button-form{
+  background-color: var(--button-color-grey);
+  color:white;
+  
+}
+
+
 
 
 
