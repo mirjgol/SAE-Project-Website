@@ -26,7 +26,10 @@
 
   body{
     font-size: 16px;
+  }
 
+  button{
+    cursor:pointer;
   }
 
     /* *********************************
@@ -328,7 +331,7 @@ opacity: 0;
 
 .anrede-box,
 .first-name-box, .last-name-box, .plz-box, .ort-box, .email-box, .nachricht-box{
-  margin-bottom:1.5rem;
+  margin-bottom:1rem;
   display:flex;
   flex-direction: column;
 }
@@ -340,7 +343,7 @@ opacity: 0;
 .street-box{
   gap:0.2rem;
   display:flex;
-  margin-bottom:3rem;
+  margin-bottom:1rem;
 }
 .street-number-box, .street-name-box{
   display:flex;
@@ -378,6 +381,12 @@ background-color: var(--soft-green);
   box-shadow: 1rem 0.5rem 5rem 0rem grey inset;
 }
 
+.error-message {
+  color: rgb(196, 9, 9);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+}
 
 
 
