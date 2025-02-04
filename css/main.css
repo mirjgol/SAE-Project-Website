@@ -26,6 +26,7 @@
 
   body{
     font-size: 1.6rem;
+    background-color: var(--lightest-color-tone);
   }
 
   button{
@@ -412,6 +413,73 @@ background-color: var(--soft-green);
   
 }
 
+
+
+
+
+/* *********************************
+  **********************************
+  **********************************
+              PROJEKTE 
+  **********************************
+  **********************************
+  ********************************** */
+.projekte-title{
+  display:flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+  .inspiration-container{
+    display:flex;
+    flex-direction: column;
+    gap:8rem;
+    margin-top: 5rem;
+  }
+.inspiration{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--darkest-color-tone);
+  color: var(--lightest-color-tone);
+  gap: 1rem;
+}
+
+
+ .inspiration img{
+max-width: 25rem;
+border-radius: var(--main-border-radius);
+margin:1rem;
+ }
+
+ .inspiration h2{
+width:100%;
+color:var(--darkest-color-tone);
+padding:1rem;
+margin-bottom: 3rem;
+background-color: var(--soft-green);
+display:flex;
+justify-content: center;
+
+ }
+
+ .inspiration h3{
+  color:var(--soft-green);
+ }
+
+.project-description{
+  display:flex;
+  justify-content: center;
+  background-color: var(--lightest-color-tone);
+  display:flex;
+  color:var(--darkest-color-tone);
+  margin:2rem;
+  padding:1rem;
+  border-radius: var(--main-border-radius);
+}
+
+.project-details{
+  
+}
 
 
 
