@@ -45,6 +45,13 @@ getProjects();
 
 
 
+/** 
+ * PROJECT CARDS
+ */
+
+
+// change inspiration to project in case this name is used *****
+
 
  getInspirationData()
 
@@ -71,7 +78,7 @@ getProjects();
    <h2> ${inspiration.title}</h2>
    <img src="${inspiration.thumbnail}" alt="${inspiration.title}">
    <p class="project-description"> ${inspiration.body}</p>
-   <h3>Material:</h3><li class="material-list" class="project-details"> ${inspiration.material}</li>
+   <h3>Material:</h3><li class="material-list" > ${inspiration.material}</li>
    <h3>Verwendung:</h3><p class="project-details"> ${inspiration.use}</p>
    <h3>Entstehung:</h3><p class="project-details"> ${inspiration.year}</p>
  </div>
