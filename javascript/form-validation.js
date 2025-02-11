@@ -28,7 +28,7 @@ const validationRules = {
   email: (value) => !value ? "E-mail Adresse eingeben" : !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value) ? "Ungültige E-Mail Adresse" : "",
 
  //MESSAGE
-  message: (value) => !value ? "darf nicht leer sein" : value.length < 30 ? "Nachricht zu kurz" : "",
+  message: (value) => !value ? "darf nicht leer sein" : value.length < 30 ? "Nachricht mindestens 30 Zeichen" : "",
    
 };
 
