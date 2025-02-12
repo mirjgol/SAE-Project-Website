@@ -35,6 +35,10 @@
   }
 
   /* *********************************
+    HERO
+      ************************************ */
+
+  /* *********************************
      SLIDER
       ************************************ */
 }
@@ -47,11 +51,26 @@
   /* *********************************
       HERO SECTION
       ************************************ */
-
   .hero-text {
-    background-image: url(../images/background-image.jpg);
-    background-size: contain;
-    background-position: right;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 1)
+      ),
+      url(../images/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 2/3;
+    background-repeat: no-repeat;
+    color: var(--lightest-color-tone);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .off-screen-navigation {
+    visibility: hidden;
   }
   /* *********************************
      CONTACT FORM
