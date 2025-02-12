@@ -36,16 +36,14 @@ button {
   border-radius: 1rem;
   font-size: 1.6rem;
 }
-button:hover {
-  background-color: var(--normal-green);
-}
 
 /* *********************************
       HEADER
       ************************************ */
 .header {
   height: 6rem;
-  background-color: var(--soft-green);
+  background-color: var(--medium-green);
+  width: 100%;
 }
 
 /* *********************************
@@ -53,9 +51,9 @@ button:hover {
       ************************************ */
 nav {
   height: 100%;
-  padding: 0.8rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -67,6 +65,7 @@ nav {
   display: flex;
   height: 6rem;
   padding: 0.1rem;
+  margin-left: 1rem;
 }
 
 /* *********************************
@@ -77,14 +76,14 @@ nav {
   height: 5rem;
   width: 5rem;
   /* margin left auto takes automatically the remaining space on left side */
-  margin-left: auto;
   position: relative;
-  background-color: var(--soft-green);
+  background-color: var(--medium-green);
+  margin-right: 1rem;
 }
 
 .hamburger-menu span {
-  height: 0.3rem;
-  width: 80%;
+  height: 0.2rem;
+  width: 70%;
   border-radius: 2.5rem;
   background-color: var(--darkest-color-tone);
   position: absolute;
@@ -127,12 +126,10 @@ nav {
       ************************************ */
 
 .off-screen-navigation {
-  background-color: var(--soft-green);
-  opacity: 80%;
+  background-color: var(--medium-green);
   background-size: cover;
   height: 100vh;
   width: 100%;
-  max-width: 35rem;
   position: absolute;
   right: -45rem;
   top: 6rem;
@@ -140,7 +137,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 3rem;
+  padding-top: 5rem;
   transition: 0.3s ease;
 }
 
@@ -155,13 +152,17 @@ nav {
 }
 
 .off-screen-link {
-  text-shadow: 1px 1px 2px black;
-  border-radius: 0.5rem;
   padding: 0.5rem;
   text-decoration: none;
 }
+
+.off-screen-link:hover {
+  text-shadow: 1px 1px 2px black;
+}
+
 .off-screen-link:visited {
   text-decoration: none;
+  color: var(--darkest-color-tone);
 }
 
 /* *********************************
@@ -181,14 +182,34 @@ nav {
   background-position: center;
   aspect-ratio: 2/3;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--lightest-color-tone);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title {
+  margin: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--soft-green);
 }
 
-.hero-welcome-span {
-  padding: 2rem;
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 2rem 4rem;
+}
+
+.hero-angebot-button {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  background-color: var(--medium-green);
+}
+
+.hero-angebot-button:hover {
+  background-color: var(--soft-green);
 }
 
 /* *********************************
@@ -447,7 +468,4 @@ nav {
   margin: 2rem;
   padding: 1rem;
   border-radius: var(--main-border-radius);
-}
-
-.project-details {
 }

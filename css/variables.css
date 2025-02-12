@@ -3,7 +3,7 @@
   COLOURS 
   ************************************ */
 
-  --lightest-color-tone: #daddd8;
+  --lightest-color-tone: #e9e0d2;
   --soft-green: #c7d59f;
   --medium-green: #b7ce63;
   --normal-green: #6faa3a;
@@ -34,4 +34,5 @@
 
   --title-font-family: "Merienda-Regular", sans-serif;
   --main-text-font-family: "Overlock-Regular", sans-serif;
+  --italic-font-family: "Overlock-Italic", sans-serif;
 }

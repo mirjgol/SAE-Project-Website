@@ -2,67 +2,77 @@
   FONTS
   ************************************ */
 
-  @font-face {
-    font-family: "Merienda-Regular";
-    src: url(../fonts/Merienda-Regular.ttf);
-  }
+@font-face {
+  font-family: "Merienda-Regular";
+  src: url(../fonts/Merienda-Regular.ttf);
+}
 
+@font-face {
+  font-family: "Overlock-Regular";
+  src: url(../fonts/Overlock-Regular.ttf);
+}
 
-  @font-face {
-    font-family: "Overlock-Regular";
-    src: url(../fonts/Overlock-Regular.ttf);
-  }
+@font-face {
+  font-family: "Overlock-Italic";
+  src: url(../fonts/Overlock-Italic.ttf);
+}
 
-
-
-      /* *********************************
-      BODY
-      ************************************ */
-body{
+/* *********************************
+BODY
+************************************ */
+body {
   font-family: var(--main-text-font-family);
   font-size: 1.6rem;
-
 }
 
-      /* *********************************
-      GENERAL
-      ************************************ */
-
-      button{
- font-family: Merienda-Medium";;
-      }
-      /* *********************************
-      HEADER
-      ************************************ */
-
-
-
-     /* *********************************
-      NAVIGATION
-      ************************************ */
-
-      .off-screen-link{
-        font-family: "Merienda-Regular", sans-serif;
-        font-size:1.4rem;
-        color:var(--darkest-color-tone);
-      }
-
-       /* *********************************
-      FORM
-      ************************************ */
-.form-input{
+/* *********************************
+GENERAL
+************************************ */
+button {
   font-family: var(--main-text-font-family);
 }
-.form-label{
+
+/* *********************************
+HEADER
+************************************ */
+
+/* *********************************
+HERO
+************************************ */
+
+.hero-title {
+  font-family: var(--title-font-family);
+  font-size: 2rem;
+}
+
+.hero-title-fokus-fina {
+  font-size: 3.5rem;
+}
+
+.hero-intro {
+  font-family: var(--italic-font-family);
+  font-size: 2rem;
+}
+
+/* *********************************
+NAVIGATION
+************************************ */
+
+.off-screen-link {
+  font-family: "Merienda-Regular", sans-serif;
+  font-size: 2rem;
+}
+
+/* *********************************
+FORM
+************************************ */
+.form-input {
+  font-family: var(--main-text-font-family);
+}
+.form-label {
   font-weight: bold;
 }
 
-.error-message{
+.error-message {
   font-family: var(--main-text-font-family);
 }
-
-
-
-
-      
-        
