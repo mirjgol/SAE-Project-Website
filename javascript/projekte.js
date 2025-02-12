@@ -1,6 +1,4 @@
-
-
-/** 
+/**
  * PROJECT CARDS
  */
 
@@ -43,37 +41,31 @@ getProjects();
 
 */
 
-
-
-/** 
+/**
  * PROJECT CARDS
  */
 
-
 // change inspiration to project in case this name is used *****
 
+getInspirationData();
 
- getInspirationData()
+async function getInspirationData() {
+  try {
+    const response = await fetch("javascript/projekte.json");
+    const data = await response.json();
 
- async function getInspirationData(){
-   try{
-    const response = await fetch('javascript/projekte.json')
-     const data = await response.json()
+    displayData(data);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Daten:", error); // Fehler
+  }
+}
 
-     displayData(data)
+function displayData(inspirations) {
+  const inspirationContainer = document.createElement("section");
+  inspirationContainer.classList.add("inspiration-container");
 
-
-   } catch(error) {
-     console.error("Fehler beim Abrufen der Daten:", error); // Fehler
-   }
- }
-
- function displayData(inspirations) {
-  const inspirationContainer = document.createElement('section')
-   inspirationContainer.classList.add('inspiration-container')
-
-  inspirations.forEach(inspiration => {
-     const template = `
+  inspirations.forEach((inspiration) => {
+    const template = `
      <div class="inspiration">
    <h2> ${inspiration.title}</h2>
    <img src="${inspiration.thumbnail}" alt="${inspiration.title}">
@@ -82,12 +74,11 @@ getProjects();
    <h3>Verwendung:</h3><p class="project-details"> ${inspiration.use}</p>
    <h3>Entstehung:</h3><p class="project-details"> ${inspiration.year}</p>
  </div>
-     `
+     `;
 
-     inspirationContainer.innerHTML += template
-   })
+    inspirationContainer.innerHTML += template;
+  });
 
-   document.querySelector('.project-section').innerText= ''
-   document.querySelector('.project-section').appendChild(inspirationContainer)
-
- }
+  document.querySelector(".project-section").innerText = "";
+  document.querySelector(".project-section").appendChild(inspirationContainer);
+}

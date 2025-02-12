@@ -64,7 +64,7 @@ nav {
 .logo-container {
   display: flex;
   height: 6rem;
-  padding: 0.1rem;
+  padding: 0.3rem;
   margin-left: 1rem;
 }
 
@@ -192,19 +192,22 @@ nav {
   margin: 4rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: var(--soft-green);
+}
+
+.hero-title-fokus-fina {
+  color: var(--medium-green);
 }
 
 .hero-intro {
   display: flex;
   flex-direction: column;
-  margin: 5rem 0 2rem 4rem;
+  margin: 5rem 0 2rem 2rem;
 }
 
 .hero-angebot-button {
   margin-top: 2rem;
-  margin-left: 4rem;
+  margin-left: 2rem;
   background-color: var(--medium-green);
 }
 

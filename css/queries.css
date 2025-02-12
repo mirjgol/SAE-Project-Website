@@ -1,7 +1,16 @@
-/* BREAKPOINTS MOBILE FIRST AUSGANGSPUNKT => @media (min-width:320px)
+/* BREAKPOINTS MOBILE FIRST AUSGANGSPUNKT => @media (min-width:320px) */
 
+@media (min-width: 371px) {
+  /* *********************************
+    HERO
+      ************************************ */
+  .hero-title-fokus-fina {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
- /* smartphones, Android phones, landscape iPhone */
+/* smartphones, Android phones, landscape iPhone */
 @media (min-width: 480px) {
   /* *********************************
     HEADER
@@ -35,12 +44,56 @@
   }
 
   /* *********************************
-    HERO
-      ************************************ */
-
-  /* *********************************
      SLIDER
       ************************************ */
+}
+
+/* blurry transition for screens bigger than 591 in hero section  */
+
+@media (min-width: 591px) {
+  /* *********************************
+    HERO
+************************************ */
+
+  .hero-text {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 1)
+      ),
+      url(../images/background-image.jpg);
+  }
+}
+
+@media (min-width: 720px) {
+  /* *********************************
+    HERO
+************************************ */
+
+  .welcome-title {
+    position: absolute;
+    right: 3rem;
+    top: 12%;
+  }
+
+  .hero-title-fokus-fina {
+    flex-direction: row;
+    position: absolute;
+    right: 3rem;
+    top: 20%;
+  }
+
+  .hero-intro {
+    position: absolute;
+    right: 10rem;
+    top: 30%;
+  }
+
+  .hero-angebot-button {
+    position: absolute;
+    right: 10rem;
+    top: 50%;
+  }
 }
 
 /* @media (min-width:600px)    portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -51,23 +104,44 @@
   /* *********************************
       HERO SECTION
       ************************************ */
+
   .hero-text {
-    height: 100vh;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0) 80%,
         rgba(0, 0, 0, 1)
       ),
       url(../images/background-image.jpg);
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 2/3;
-    background-repeat: no-repeat;
-    color: var(--lightest-color-tone);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
+
+  .welcome-title {
+    position: absolute;
+    right: 3rem;
+    top: 10%;
+  }
+
+  .hero-title-fokus-fina {
+    flex-direction: row;
+    position: absolute;
+    right: 3rem;
+    top: 20%;
+  }
+
+  .hero-intro {
+    position: absolute;
+    right: 3rem;
+    top: 40%;
+  }
+
+  .hero-angebot-button {
+    position: absolute;
+    right: 3rem;
+    top: 60%;
+  }
+
+  /* *********************************
+     OFF SCREEN MENU NAVIGATION
+      ************************************ */
 
   .off-screen-navigation {
     visibility: hidden;

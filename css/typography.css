@@ -1,3 +1,5 @@
+/* clamp(nie kleiner als, skaliert flexibel mit bildschirmbreite in vw, nie grösser als ) */
+
 /* *********************************
   FONTS
   ************************************ */
@@ -40,18 +42,27 @@ HEADER
 HERO
 ************************************ */
 
-.hero-title {
+/* clamp(min-Wert, vw-Wert, max-Wert/) 
+(px-Wert / Viewport-Breite) * 100 = vw */
+
+.hero-title,
+.hero-title-fokus-fina {
   font-family: var(--title-font-family);
-  font-size: 2rem;
+  font-size: clamp(2rem, 6.25vw, 4rem);
 }
 
-.hero-title-fokus-fina {
-  font-size: 3.5rem;
+ {
+  font-size: clamp(3.5rem, 10.9vw, 6rem);
+  /* font-size: 3.5rem; */
 }
 
 .hero-intro {
   font-family: var(--italic-font-family);
-  font-size: 2rem;
+  font-size: clamp(2rem, 3.1vw, 4rem);
+}
+
+.hero-angebot-button {
+  font-size: clamp(2rem, 3.1vw, 4rem);
 }
 
 /* *********************************
