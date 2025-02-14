@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* *********************************
   IMPORTS
   ************************************ */
@@ -5,8 +12,8 @@
 @import url(../css/typography.css);
 
 /* *********************************
-    SMALL RESET
-    ************************************ */
+  SMALL RESET
+ ************************************ */
 
 *::before,
 *::after,
@@ -17,8 +24,8 @@
 }
 
 /* *********************************
-      GENERAL
-      ************************************ */
+  GENERAL
+ ************************************ */
 
 html {
   font-size: 62.5%;
@@ -33,24 +40,43 @@ button {
   cursor: pointer;
   padding: 1rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: 1.6rem;
 }
 
-/* *********************************
-      HEADER
-      ************************************ */
-.header {
-  height: 6rem;
-  background-color: var(--medium-green);
-  width: 100%;
+.site-title {
+  color: var(--darkest-color-tone);
+  display: flex;
+  justify-content: center;
+}
+
+.project-section,
+.kontakt-section,
+.galerie-section,
+.angebot-section {
+  background-color: var(--lightest-color-tone);
+  width: 100vw;
+  margin-top: 9rem;
 }
 
 /* *********************************
-      NAVIGATION
-      ************************************ */
+  HEADER
+  ************************************ */
+.header {
+  height: 6rem;
+  background-color: var(--medium-green);
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+
+/* *********************************
+  NAVIGATION
+  ************************************ */
 nav {
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -58,24 +84,23 @@ nav {
 }
 
 /* *********************************
-      LOGO
-      ************************************ */
+ LOGO
+ ************************************ */
 
 .logo-container {
   display: flex;
   height: 6rem;
-  padding: 0.3rem;
+  padding: 0.1rem;
   margin-left: 1rem;
 }
 
 /* *********************************
-      HAMBURGER MENU
-      ************************************ */
+  HAMBURGER MENU
+  ************************************ */
 
 .hamburger-menu {
   height: 5rem;
   width: 5rem;
-  /* margin left auto takes automatically the remaining space on left side */
   position: relative;
   background-color: var(--medium-green);
   margin-right: 1rem;
@@ -122,8 +147,8 @@ nav {
 }
 
 /* *********************************
-     OFF SCREEN MENU NAVIGATION
-      ************************************ */
+  OFF SCREEN MENU NAVIGATION
+  ************************************ */
 
 .off-screen-navigation {
   background-color: var(--medium-green);
@@ -154,6 +179,7 @@ nav {
 .off-screen-link {
   padding: 0.5rem;
   text-decoration: none;
+  color: var(--darkest-color-tone);
 }
 
 .off-screen-link:hover {
@@ -165,9 +191,17 @@ nav {
   color: var(--darkest-color-tone);
 }
 
+/*  *********************************
+    **********************************
+    **********************************
+    HOME 
+    **********************************
+    **********************************
+    ********************************** */
+
 /* *********************************
-      HERO SECTION
-      ************************************ */
+  HERO SECTION
+ ************************************ */
 
 .hero-section {
   background-color: var(--hero-background-color);
@@ -175,9 +209,10 @@ nav {
   width: 100vw;
 }
 
-.hero-text {
+.hero-text-container {
   height: 100vh;
-  background-image: url(../images/background-image.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url(../images/background-image.jpg);
   background-size: cover;
   background-position: center;
   aspect-ratio: 2/3;
@@ -188,26 +223,36 @@ nav {
   align-items: flex-start;
 }
 
-.hero-title {
-  margin: 4rem 2rem;
+/* Mobile */
+
+.hero-title-mobile {
+  margin: 10rem 0rem 4rem 2rem;
   display: flex;
   flex-direction: column;
   color: var(--soft-green);
+  gap: 1rem;
 }
-
-.hero-title-fokus-fina {
-  color: var(--medium-green);
-}
-
-.hero-intro {
+.welcome-span-mobile {
   display: flex;
   flex-direction: column;
-  margin: 5rem 0 2rem 2rem;
 }
 
+.fokus-fina-span-mobile {
+  color: var(--medium-green);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-intro-mobile-version {
+  display: flex;
+  flex-direction: column;
+  margin: 12rem 0 1.5rem 2rem;
+}
+
+/* BUTTON */
+
 .hero-angebot-button {
-  margin-top: 2rem;
-  margin-left: 2rem;
+  margin: 0 2rem;
   background-color: var(--medium-green);
 }
 
@@ -215,9 +260,23 @@ nav {
   background-color: var(--soft-green);
 }
 
+/* Desktop ausgeblendet */
+
+.welcome-span-desktop {
+  display: none;
+}
+
+.fokus-fina-span-desktop {
+  display: none;
+}
+
+.hero-intro-desktop-version {
+  display: none;
+}
+
 /* *********************************
-       SLIDER SECTION
-      ************************************ */
+SLIDER SECTION
+************************************ */
 
 .slider-section {
   position: relative;
@@ -336,8 +395,8 @@ nav {
 }
 
 /* *********************************
-       CONTACT FORM 
-      ************************************ */
+  CONTACT FORM 
+  ************************************ */
 
 .anrede-box,
 .first-name-box,
@@ -414,18 +473,22 @@ nav {
   color: white;
 }
 
-/* *********************************
-  **********************************
-  **********************************
-              PROJEKTE 
-  **********************************
-  **********************************
-  ********************************** */
-.projekte-title {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
+/*  *********************************
+    **********************************
+    **********************************
+    ANGEBOT
+    **********************************
+    **********************************
+    ********************************** */
+
+/*  *********************************
+    **********************************
+    **********************************
+    PROJEKTE
+    **********************************
+    **********************************
+    ********************************** */
+
 .inspiration-container {
   display: flex;
   flex-direction: column;
@@ -472,3 +535,46 @@ nav {
   padding: 1rem;
   border-radius: var(--main-border-radius);
 }
+
+/*  *********************************
+    **********************************
+    **********************************
+    GALERIE
+    **********************************
+    **********************************
+    ********************************** */
+
+.title-galerie {
+  margin: var(--header-height) 0.8rem 0 0.8rem;
+  display: flex;
+  color: var(--darkest-color-tone);
+  padding-top: 3rem;
+}
+
+.galerie-grid {
+  display: grid;
+  grid-template-rows: repeat(20 1fr);
+  grid-template-columns: 1fr;
+  row-gap: 8rem;
+  margin: var(--section-margin-top) 0.8rem 0 0.8rem;
+}
+
+.galerie-img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  aspect-ratio: 3/2;
+}
+.galerie-img-hoch {
+  width: 100%;
+  -o-object-fit: cover;
+  aspect-ratio: 2/3;
+}
+
+/*  *********************************
+    **********************************
+    **********************************
+    KONTAKT
+    **********************************
+    **********************************
+    ********************************** */

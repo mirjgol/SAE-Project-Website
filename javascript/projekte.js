@@ -61,7 +61,7 @@ async function getInspirationData() {
 }
 
 function displayData(inspirations) {
-  const inspirationContainer = document.createElement("section");
+  const inspirationContainer = document.createElement("div");
   inspirationContainer.classList.add("inspiration-container");
 
   inspirations.forEach((inspiration) => {
@@ -79,6 +79,8 @@ function displayData(inspirations) {
     inspirationContainer.innerHTML += template;
   });
 
-  document.querySelector(".project-section").innerText = "";
-  document.querySelector(".project-section").appendChild(inspirationContainer);
+  document.querySelector(".inspiration-cards-container").innerText = "";
+  document
+    .querySelector(".inspiration-cards-container")
+    .appendChild(inspirationContainer);
 }

@@ -1,30 +1,65 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* BREAKPOINTS MOBILE FIRST AUSGANGSPUNKT => @media (min-width:320px) */
 
-@media (min-width: 371px) {
+@media (min-width: 390px) {
   /* *********************************
-    HERO
-      ************************************ */
-  .hero-title-fokus-fina {
-    display: flex;
-    flex-direction: column;
+    HERO min-width: 390px
+    ************************************ */
+
+  .hero-title-mobile {
+    margin: 8.5rem 0rem 4rem 3rem;
+    gap: 2rem;
+  }
+
+  .hero-intro-mobile-version {
+    padding-left: 1rem;
+  }
+
+  .hero-angebot-button {
+    margin: 1rem 3rem;
   }
 }
 
-/* smartphones, Android phones, landscape iPhone */
+@media (min-width: 534px) {
+  /* *********************************
+    HERO min-width: 375px
+    ************************************ */
+
+  .hero-text-container {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+      ),
+      url(../images/background-image.jpg);
+  }
+
+  .fokus-fina-span-desktop {
+    margin-top: 2rem;
+  }
+}
+
 @media (min-width: 480px) {
   /* *********************************
-    HEADER
-      ************************************ */
+    HEADER min-width: 480px
+    ************************************ */
 
   .header {
     height: 8rem;
   }
 
   .logo-container {
-    display: flex;
     height: 8rem;
     padding: 0.1rem;
   }
+
+  /* HAM MENU & OFF SCREEN LINKS */
 
   .hamburger-menu span {
     width: 90%;
@@ -44,110 +79,226 @@
   }
 
   /* *********************************
-     SLIDER
-      ************************************ */
-}
+    HERO min-width: 480px
+    ************************************ */
+  .welcome-span-mobile {
+    display: none;
+  }
 
-/* blurry transition for screens bigger than 591 in hero section  */
+  .welcome-span-desktop {
+    display: flex;
+    position: absolute;
+    left: 7%;
+    top: 20%;
+  }
+
+  .fokus-fina-span-mobile {
+    display: none;
+  }
+
+  .fokus-fina-span-desktop {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 7%;
+    top: 25%;
+    color: var(--medium-green);
+  }
+
+  .hero-intro-desktop-version {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 7%;
+    top: 50%;
+  }
+
+  .hero-intro-mobile-version {
+    display: none;
+  }
+
+  .hero-angebot-button {
+    position: absolute;
+    right: 6%;
+    top: 65%;
+    display: flex;
+  }
+
+  /* *********************************
+     SECTIONS min-width: 480px
+    ************************************ */
+  .project-section,
+  .kontakt-section,
+  .galerie-section,
+  .angebot-section {
+    margin-top: 12rem;
+  }
+
+  /* *********************************
+     SLIDER min-width: 480px
+    ************************************ */
+}
 
 @media (min-width: 591px) {
   /* *********************************
-    HERO
-************************************ */
+    HERO min-width: 591px
+    ************************************ */
 
-  .hero-text {
+  .hero-text-container {
     background-image: linear-gradient(
         to right,
-        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 1)
       ),
       url(../images/background-image.jpg);
+  }
+}
+
+@media (min-width: 570px) {
+  /* *********************************
+    HERO min-width: 570px
+    ************************************ */
+  .hero-angebot-button {
+    margin: 2rem;
+  }
+}
+@media (min-width: 590px) {
+  /* *********************************
+    HERO min-width: 590px
+    ************************************ */
+  .hero-angebot-button {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 630px) {
+  /* *********************************
+    HERO min-width: 630px
+    ************************************ */
+  .hero-angebot-button {
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 697px) {
+  /* *********************************
+    HERO min-width: 697px
+    ************************************ */
+  .hero-angebot-button {
+    margin-top: 5rem;
   }
 }
 
 @media (min-width: 720px) {
   /* *********************************
-    HERO
+    HERO min-width: 720px
 ************************************ */
 
-  .welcome-title {
-    position: absolute;
-    right: 3rem;
-    top: 12%;
+  .welcome-span-mobile {
+    display: none;
   }
 
-  .hero-title-fokus-fina {
+  .welcome-span-desktop {
+    display: flex;
+    position: absolute;
+    left: 46%;
+    top: 15%;
+  }
+
+  .fokus-fina-span-mobile {
+    display: none;
+  }
+
+  .fokus-fina-span-desktop {
     flex-direction: row;
     position: absolute;
-    right: 3rem;
-    top: 20%;
-  }
-
-  .hero-intro {
-    position: absolute;
-    right: 10rem;
+    left: 46%;
     top: 30%;
   }
 
+  .hero-intro-desktop-version {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 36%;
+    top: 56%;
+  }
+
+  .hero-intro-mobile-version {
+    display: none;
+  }
+
   .hero-angebot-button {
     position: absolute;
-    right: 10rem;
-    top: 50%;
+    right: 10%;
+    top: 75%;
+    display: flex;
+  }
+
+  /* *********************************
+    GALERIE min-width: 720px
+************************************ */
+  .galerie-grid {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
   }
 }
 
-/* @media (min-width:600px)    portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-
-/* tablet, landscape iPad, lo-res laptops ands desktops */
-
 @media (min-width: 801px) {
   /* *********************************
-      HERO SECTION
-      ************************************ */
-
-  .hero-text {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0) 80%,
-        rgba(0, 0, 0, 1)
-      ),
-      url(../images/background-image.jpg);
-  }
-
-  .welcome-title {
-    position: absolute;
-    right: 3rem;
-    top: 10%;
-  }
-
-  .hero-title-fokus-fina {
-    flex-direction: row;
-    position: absolute;
-    right: 3rem;
-    top: 20%;
-  }
-
-  .hero-intro {
-    position: absolute;
-    right: 3rem;
-    top: 40%;
-  }
-
-  .hero-angebot-button {
-    position: absolute;
-    right: 3rem;
-    top: 60%;
-  }
-
-  /* *********************************
-     OFF SCREEN MENU NAVIGATION
+      NAVIGATION min-width: 801px
       ************************************ */
 
   .off-screen-navigation {
-    visibility: hidden;
+    height: 8rem;
+    width: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: none;
+    padding: 1rem 2rem;
   }
+
+  .off-screen-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .off-screen-link {
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+
+  .off-screen-link:hover {
+    text-shadow: 1px 1px 2px #151f1e;
+  }
+
+  .off-screen-link:visited {
+    text-decoration: none;
+    color: var(--darkest-color-tone);
+  }
+
   /* *********************************
-     CONTACT FORM
+     GALERIE min-width: 801px
+      ************************************ */
+
+  .galerie-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    margin: var(--desktop-section-margin-top) 0.8rem 0 0.8rem;
+  }
+
+  /* *********************************
+     CONTACT FORM min-width: 801px
       ************************************ */
 
   .form-section {
@@ -216,7 +367,7 @@
   .email-box {
     margin-bottom: 2rem;
   }
-}
 
-/* @media (min-width:1025px)   big landscape tablets, laptops, and desktops */
-/* @media (min-width:1281px)   hi-res laptops and desktops */
+  /* @media (min-width:1025px)   big landscape tablets, laptops, and desktops */
+  /* @media (min-width:1281px)   hi-res laptops and desktops */
+}

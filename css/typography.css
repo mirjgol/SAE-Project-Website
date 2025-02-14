@@ -18,65 +18,72 @@
   font-family: "Overlock-Italic";
   src: url(../fonts/Overlock-Italic.ttf);
 }
+@font-face {
+  font-family: "Overlock-Bold";
+  src: url(../fonts/Overlock-Bold.ttf);
+}
 
 /* *********************************
-BODY
-************************************ */
+  BODY
+  ************************************ */
 body {
   font-family: var(--main-text-font-family);
+  font-size: 1.5rem;
+}
+
+/* *********************************
+  GENERAL
+  ************************************ */
+button {
+  font-family: var(--bold-font-family);
+}
+
+/* *********************************
+  HEADER
+  ************************************ */
+
+/* *********************************
+  HERO
+  ************************************ */
+
+/* clamp(min-Wert, vw-Wert, max-Wert/) 
+  (px-Wert / Viewport-Breite) * 100 = vw */
+
+.welcome-span-mobile,
+.welcome-span-desktop {
+  font-family: var(--title-font-family);
+  font-size: clamp(2rem, 6.25vw, 4.5rem);
+}
+
+.fokus-fina-span-mobile,
+.fokus-fina-span-desktop,
+.site-title {
+  font-family: var(--title-font-family);
+  font-size: clamp(3.5rem, 10.8vw, 6rem);
+}
+
+.hero-intro-desktop-version,
+.hero-intro-mobile-version {
+  font-family: var(--italic-font-family);
+  font-size: clamp(1.8rem, 5.6vw, 4rem);
+}
+
+.hero-angebot-button {
+  font-size: clamp(1.5rem, 3.1vw, 2.5rem);
+}
+
+/* *********************************
+  NAVIGATION
+  ************************************ */
+
+.off-screen-link {
+  font-family: "Merienda-Regular", sans-serif;
   font-size: 1.6rem;
 }
 
 /* *********************************
-GENERAL
-************************************ */
-button {
-  font-family: var(--main-text-font-family);
-}
-
-/* *********************************
-HEADER
-************************************ */
-
-/* *********************************
-HERO
-************************************ */
-
-/* clamp(min-Wert, vw-Wert, max-Wert/) 
-(px-Wert / Viewport-Breite) * 100 = vw */
-
-.hero-title,
-.hero-title-fokus-fina {
-  font-family: var(--title-font-family);
-  font-size: clamp(2rem, 6.25vw, 4rem);
-}
-
- {
-  font-size: clamp(3.5rem, 10.9vw, 6rem);
-  /* font-size: 3.5rem; */
-}
-
-.hero-intro {
-  font-family: var(--italic-font-family);
-  font-size: clamp(2rem, 3.1vw, 4rem);
-}
-
-.hero-angebot-button {
-  font-size: clamp(2rem, 3.1vw, 4rem);
-}
-
-/* *********************************
-NAVIGATION
-************************************ */
-
-.off-screen-link {
-  font-family: "Merienda-Regular", sans-serif;
-  font-size: 2rem;
-}
-
-/* *********************************
-FORM
-************************************ */
+  FORM
+  ************************************ */
 .form-input {
   font-family: var(--main-text-font-family);
 }
