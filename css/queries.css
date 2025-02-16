@@ -121,10 +121,6 @@
   .angebot-section {
     margin-top: 12rem;
   }
-
-  /* *********************************
-     SLIDER min-width: 480px
-    ************************************ */
 }
 
 @media (min-width: 534px) {
@@ -371,17 +367,21 @@
     padding: 4rem;
   }
 
-  .contact-form-img {
-    padding: 2rem;
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
+  .contact-form-img-desktop {
+    max-height: 100%;
+    width: auto;
     box-shadow: 1rem 0.5rem 5rem 0rem grey inset;
   }
 
-  .contact-form-img-box {
-    display: flex;
-    width: 100%;
+  .contact-form-img-mobile {
+    display: none;
+  }
+
+  .contact-form-img-box-mobile {
+    display: none;
+  }
+
+  .contact-form-img-box-desktop {
     height: auto;
   }
 

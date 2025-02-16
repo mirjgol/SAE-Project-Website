@@ -277,123 +277,79 @@ nav {
 /* *********************************
 SLIDER SECTION
 ************************************ */
-
-.slider-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+.img-slider-section {
+  background-color: var(--soft-green);
+  margin-top: var(--section-margin-top);
+  max-width: 100%;
+  height: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-family: "Merienda", serif;
-  font-size: 1.4rem;
-}
-
-.slider-container {
-  position: absolute;
-  inset: 6rem 30rem 6rem 30rem;
-  display: flex;
   justify-content: center;
 }
 
-.slider-container .slider-item {
-  position: absolute;
-  top: 82%;
-  left: 1%;
-  transform: translateY(-50%);
-  width: 16rem;
-  height: 22rem;
-  border-radius: 1.5rem;
-  transition: 0.3s;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.5);
+.slides-title {
+  padding: 2rem 0;
 }
 
-.slider-container .slider-item:nth-child(1),
-.slider-container .slider-item:nth-child(2) {
+.img-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.slide {
+  padding: 1rem;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  transform: translateY(0);
-  box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.5);
-  background-size: cover;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
 }
 
-.slider-container .slider-item:nth-child(3) {
-  left: calc(50% + 16rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(4) {
-  left: calc(50% + 36rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(5) {
-  left: calc(50% + 56rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(6) {
-  left: calc(50% + 76rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(7) {
-  left: calc(50% + 96rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(8) {
-  left: calc(50% + 116rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(9) {
-  left: calc(50% + 136rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(10) {
-  left: calc(50% + 156rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(11) {
-  left: calc(50% + 176rem);
-  background-size: cover;
-}
-.slider-container .slider-item:nth-child(12) {
-  left: calc(50% + 196rem);
-  background-size: cover;
-  opacity: 0;
-}
-.slider-container .slider-item:nth-child(13) {
-  left: calc(50% + 216rem);
-  background-size: cover;
-  opacity: 0;
+.slider-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: var(--main-border-radius);
 }
 
 .slider-buttons {
-  position: absolute;
-  bottom: -5.5rem;
   display: flex;
+  justify-content: center;
   gap: 2rem;
+  padding: 2rem 0;
 }
 
-.slider-buttons span {
-  position: relative;
+.play-pause,
+.right,
+.left {
+  background-color: var(--lightest-color-tone);
+  padding: 1rem;
+  color: var(--darkest-color-tone);
+  border: solid 1px var(--darkest-color-tone);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background-color: var(--darkest-color-tone);
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
+}
+.play-pause:hover,
+.right:hover,
+.left:hover {
+  background-color: var(--medium-green);
+  color: var(--darkest-color-tone);
 }
 
-.slider-buttons span:active {
-  opacity: 0.5;
+i .fa-left-long,
+.fa-solid:hover {
+  background-color: var(--gold);
 }
-
 /* *********************************
   CONTACT FORM 
   ************************************ */
@@ -419,6 +375,10 @@ SLIDER SECTION
   margin-bottom: 0.1rem;
 }
 
+.form-input {
+  padding: 0.4rem;
+}
+
 .form-title,
 .contact-form-img {
   margin-bottom: 1.5rem;
@@ -442,19 +402,21 @@ SLIDER SECTION
 }
 
 .form-section {
-  margin: 10rem 0 10rem 0;
-  margin: 2rem;
-  padding: 2rem;
+  margin-top: var(--section-margin-top);
+  padding: 3rem;
   border-radius: 1.5rem;
   background-color: var(--soft-green);
 }
 
-.contact-form-img-box {
+.contact-form-img-box-mobile {
   width: 5rem;
   height: auto;
 }
+.contact-form-img-box-desktop {
+  display: none;
+}
 
-.contact-form-img {
+.contact-form-img-mobile {
   padding: 2rem;
   max-width: 100%;
   height: auto;
@@ -462,6 +424,9 @@ SLIDER SECTION
   box-shadow: 1rem 0.5rem 5rem 0rem grey inset;
 }
 
+.contact-form-img-desktop {
+  display: none;
+}
 .error-message {
   color: var(--error-red-form-validation);
   margin-top: 0.5rem;

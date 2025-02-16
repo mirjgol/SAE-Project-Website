@@ -100,43 +100,75 @@
 
   </main>
 
-  <section class="slider-section">
-    <div class="slider-container">
-<div class="slider-item" style="background-image: url(./images/slider-dress-blue-back.webp), url(images/slider-dress-blue-back.JPG);"></div>
+  <section class="img-slider-section">   <div class="title">
+          <h2 class="slides-title">title</h2>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-blue-front.webp), url(images/slider-dress-blue-front.JPG);"></div>
+        </div>
+    <div class="img-slider-container">
+    
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-blue-side.webp), url(images/slider-dress-blue-side.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-blue-back.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-blue-back.JPG" alt="Sommerkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-grey-back.webp), url(images/slider-dress-grey-back.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-blue-front.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-blue-front.JPG" alt="Sommerkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-grey-front.webp), url(images/slider-dress-grey-front.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-blue-side.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-blue-side.JPG" alt="Sommerkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-grey-hood.webp), url(images/slider-dress-grey-hood.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-grey-front.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-grey-front.JPG" alt="Zipperkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-white-bottom.webp), url(images/slider-dress-white-bottom.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-grey-back.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-grey-back.JPG" alt="Zipperkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-white-full.webp), url(images/slider-dress-white-full.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-grey-hood.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-grey-hood.JPG" alt="Zipperkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-white-side.webp), url(images/slider-dress-white-side.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-white-full.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-white-full.JPG" alt="Sommerkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-dress-white-top.webp), url(images/slider-dress-white-top.JPG);"></div>
+        <picture class="slide">
+            <source srcset="./images/slider-dress-white-side.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-white-side.JPG" alt="Sommerkleid">
+        </picture>
 
-<div class="slider-item" style="background-image: url(./images/slider-hat-front.webp), url(images/slider-hat-front.JPG);"></div>
-
-<div class="slider-item" style="background-image: url(./images/slider-hat-inside.webp), url(images/slider-hat-inside.JPG);"></div>
-
- <div class="slider-item" style="background-image: url(./images/slider-hat-side.webp), url(images/slider-hat-side.JPG);"></div> 
-
-<div class="slider-buttons">
-  <span class="previous"><</span>
-      <span class="play-pause">||</span>
-  <span class="next">></span>
-</div>
-
+        <picture class="slide">
+            <source srcset="./images/slider-dress-white-top.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-dress-white-top.JPG" alt="Sommerkleid">
+        </picture>
 
 
-  </section>
+        <picture class="slide">
+            <source srcset="./images/slider-hat-side.webp" type="image/webp">
+            <img class="slider-img" src="./images/slider-hat-side.JPG" alt="Musketier Hut">
+        </picture>
+
+       </div>
+       
+    </div>  
+    <div class="slider-buttons">
+            <span class="left">&lt;</span>
+            <span class="play-pause">&#9632;</span>
+            <span class="right">&gt;</span>
+        </div>
+
+ 
+</section>
 
   <section class="form-section">
 
@@ -146,13 +178,24 @@
 
       <div class="title-box">
         <h2 class="form-title">Kontaktiere mich</h2>
-        <picture class="contact-form-img-box"
+        <picture class="contact-form-img-box-mobile"
           ><source src="images/slider-dress-grey-hood.webp" type="image/webp" />
 
           <img
-            class="contact-form-img"
+            class="contact-form-img-mobile"
             loading="lazy"
             src="images/slider-dress-grey-hood.JPG"
+            alt="Graues Kleid mit Kapuze"
+          />
+        </picture>
+
+        <picture class="contact-form-img-box-desktop"
+          ><source src="images/slider-dress-grey-hood-desktop.JPG" type="image/webp" />
+
+          <img
+            class="contact-form-img-desktop"
+            loading="lazy"
+            src="images/slider-dress-grey-hood-desktop.JPG"
             alt="Graues Kleid mit Kapuze"
           />
         </picture>
@@ -247,3 +290,5 @@ git push origin main
 
 
 -->
+
+
