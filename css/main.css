@@ -490,50 +490,99 @@ SLIDER SECTION
     ********************************** */
 
 .inspiration-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-  margin-top: 5rem;
+  padding: 4rem 2.5rem;
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 .inspiration {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--darkest-color-tone);
-  margin: 1rem;
   color: var(--lightest-color-tone);
   gap: 1rem;
-}
-
-.inspiration img {
-  max-width: 25rem;
+  border: solid 0.1rem var(--darkest-color-tone);
   border-radius: var(--main-border-radius);
-  margin: 1rem;
 }
 
-.inspiration h2 {
-  width: 100%;
-  color: var(--darkest-color-tone);
-  padding: 1rem;
-  margin-bottom: 3rem;
-  background-color: var(--soft-green);
+.thumbnails-slider {
+  position: relative;
+  overflow: hidden;
+  width: 15rem;
+  aspect-ratio: 2/3;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.thumbnails-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.thumbnails {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: var(--main-border-radius);
+}
+
+.inspiration p {
+  color: var(--darkest-color-tone);
+}
+
+.project-year {
+  color: var(--medium-green);
 }
 
 .inspiration h3 {
-  color: var(--soft-green);
+  width: 100%;
+  color: var(--darkest-color-tone);
+  padding: 1rem;
+  background-color: var(--soft-green);
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: var(--main-border-radius);
+  border-top-right-radius: var(--main-border-radius);
 }
 
 .project-description {
+  width: 100%;
   display: flex;
   justify-content: center;
   background-color: var(--lightest-color-tone);
   display: flex;
   color: var(--darkest-color-tone);
-  margin: 2rem;
   padding: 1rem;
-  border-radius: var(--main-border-radius);
+}
+
+.buttons-container-projects {
+  display: flex;
+}
+
+.previous-thumbnail,
+.next-thumbnail {
+  background-color: var(--lightest-color-tone);
+}
+
+.previous-thumbnail:hover,
+.next-thumbnail:hover {
+  color: var(--medium-green);
+}
+
+.material-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.material-list {
+  list-style: none;
+  color: var(--darkest-color-tone);
 }
 
 /*  *********************************

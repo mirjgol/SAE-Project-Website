@@ -1,12 +1,14 @@
 [
   {
     "title": "Éowyn",
-    "body": "Kleid inspiriert von Herr der Ringe. Ein Kleid welches ich schon lange verwirklichen wollte, das Lehrabschlussprojekt, gab mir die Möglichkeit, dies dann endlich umzusetzen.",
-    "thumbnail": "images/eowyn.jpg",
-    "thumbnail_alt": "weisses Kleid von Galadriel",
+    "body": "Kleid inspiriert von Herr der Ringe. Ein Kleid welches ich schon lange verwirklichen wollte, das Lehrabschlussprojekt, gab mir die Möglichkeit, dies dann auch endlich umzusetzen.",
+    "thumbnails": [
+      "images/eowyn-back.webp",
+      "images/eowyn-front.webp",
+      "images/eowyn-zoom.webp"
+    ],
     "material": ["Wolle (aussen)", "Baumwolle (innen)"],
     "use": "Gewandung für Anlässe",
-
     "year": "2018",
     "post_id": 1
   },
@@ -14,8 +16,11 @@
   {
     "title": "Sommervogelkleid",
     "body": "Dieses Kleid habe ich angefertigt für meinen Lehrabschluss",
-    "thumbnail": "images/butterfly-dress-front.JPG",
-    "thumbnail_alt": "Festkleid mit Schmetterlingen",
+    "thumbnails": [
+      "images/butterfly-dress-front.webp",
+      "images/butterfly-dress-back.webp",
+      "images/butterfly-dress-side.webp"
+    ],
     "material": ["Seide"],
     "use": "Abschlusskleid",
     "year": "2018",
@@ -25,12 +30,9 @@
   {
     "title": "Miss Fortune",
     "body": "Cosplay Kostüm für Fantasy Basel 2019. Inspiriert durch League of Legends Lieblingschampion.",
-    "thumbnail": "images/miss-fortune.jpg",
-    "thumbnail_alt": "Miss Fortune Kostüm",
+    "thumbnails": ["images/miss-fortune.webp"],
     "material": ["Kunstleder", "Leder", "Viskose", "Baumwollspitze"],
-
     "use": "Cosplay",
-
     "year": "2019",
     "post_id": 3
   },
@@ -38,16 +40,19 @@
   {
     "title": "Zipperkleid",
     "body": "Dieses Kleid habe ich für ein Weihnachtsessen gemacht. Es sollte schick, warm und praktisch sein. Den Schnitt habe ich selbst entworfen, es sollte ein aussergewöhnliches, einzigartiges Stück werden.",
-    "thumbnail": "images/zipperkleid.jpg",
-    "thumbnail_alt": "graues Kleid mit Reisverschluss",
+    "thumbnails": [
+      "images/zipperkleid-front.webp",
+      "images/zipperkleid-back.webp",
+      "images/zipperkleid-side.webp",
+      "images/zipperkleid-schnuerung.webp"
+    ],
     "material": [
       "Wolle",
       "Polyesterschnüre",
       "Metallringe",
       "Metallreisverschluss"
     ],
-    "use": "praktisches Kleid für Frühling und Herbst",
-
+    "use": "Alltagskleid",
     "year": "2020",
     "post_id": 4
   },
@@ -55,8 +60,10 @@
   {
     "title": "Mein erstes Mittelalterkleid",
     "body": "Bevor ich meinen ersten Mittelaltermarkt besucht habe, wollte ich unbedingt ein Kleid haben. Dieses habe ich zusammen mit meiner Schwester genäht.  ",
-    "thumbnail": "images/medieval-dress-green.jpg",
-    "thumbnail_alt": "grünes Mittelalterkleid",
+    "thumbnails": [
+      "images/dress-green-front.webp",
+      "images/dress-green-arms.webp"
+    ],
     "material": [
       "Hanfstoff",
       "Baumwollbrokat",
@@ -64,7 +71,6 @@
       "Verzierungsbänder"
     ],
     "use": "Mittelaltergewandung",
-
     "year": 2010,
     "post_id": 5
   },
@@ -72,11 +78,15 @@
   {
     "title": "Kleid von Aschenbrödel",
     "body": "Ich war Fan des Films 3 Haselnüsse für Aschenbrödel, und musste mir unbedingt dieses Kleid daraus nachnähen.",
-    "thumbnail": "images/aschenbroedel-dress-front.JPG",
-    "thumbnail_alt": "Kleid und Schleppe von Aschenbrödel",
+    "thumbnails": [
+      "images/aschenbroedel-dress-complete.webp",
+      "images/aschenbroedel-cape-front.webp",
+      "images/aschenbroedel-cape-back.webp",
+      "images/aschenbroedel-dress-front.webp",
+      "images/aschenbroedel-dress-back.webp"
+    ],
     "material": ["Seidenjacquard", "Vorhangstoff"],
     "use": "Kostüm aus Film",
-
     "year": "2011",
     "post_id": 6
   },
@@ -84,11 +94,15 @@
   {
     "title": "Mittelalter Kleid & Rock",
     "body": "Dieses kombinierbare Kleid und Rock habe ich als Merida Kostüm für die Fantasy Basel genäht.",
-    "thumbnail": "images/mittelalter-dress-and-skirt-blue-front.JPG",
-    "thumbnail_alt": "blaues Mittelalterkleid",
+    "thumbnails": [
+      "images/mittelalter-dress-and-skirt-blue-front.webp",
+      "images/mittelalter-dress-and-skirt-blue-back.webp",
+      "images/mittelalter-dress-blue-front.webp",
+      "images/mittelalter-dress-blue-back.webp",
+      "images/mittelalter-skirt-blue.webp"
+    ],
     "material": ["Leinen"],
-    "use": "Gewandungsstück zum kombinieren",
-
+    "use": "Gewandungsstück 2-teilig",
     "year": "2019",
     "post_id": 7
   },
@@ -96,11 +110,9 @@
   {
     "title": "Schlittelkissen",
     "body": "Die Kissen habe ich für einen Schlitteltag genäht. Für jeden der beim Ausflug dabei war, habe ich ein passendes Motiv aufs Kissen genäht. Die Kissen können am Schlitten befestigt werden.",
-    "thumbnail": "images/pillow-schlitteln.jpg",
-    "thumbnail_alt": "Kissen für den Schlitten",
+    "thumbnails": ["images/pillow-schlitteln.webp"],
     "material": ["Wolle", "Regenstoff", "Leder", "Volumenvliess", "D-Ring"],
     "use": "Sitzunterlage",
-
     "year": "2024",
     "post_id": 8
   }

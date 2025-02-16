@@ -1,51 +1,102 @@
 /**
- * PROJECT CARDS
+ * PROJECT CARDS for inspiration
  */
 
-/*
-async function getProjects() {
+getInspirationData();
 
-  // holen der json daten
+async function getInspirationData() {
+  try {
+    const response = await fetch("javascript/projekte.json");
+    const data = await response.json();
 
-  const response = await fetch("projekte.json");
-  const projects = await response.json();
-
-  //container mit allen Projekten
-  const mainContainer = document.querySelector(".project-section");
-
-  projects.forEach(project => {
-  //check with console
-  // console.log(project.title);
-
-  const projectElement = document.createElement("project-overview");
-
-  const template = `<h2 class="project-title">${project.title}</h2>
-<p class="project-definition">${project.body}</p>
-<img class="project-image" src="images/${project.thumbnail}" alt="${project.thumbnail_alt}">
-<p class="materials">${project.material}</p>
-<p class="use">${project.use}</p>
-<p class="year">${project.year}</p>
-<p class="post-id">${project.post_id}</p>
-  `
-
-  projectElement.innerHTML = template;
-
-  mainContainer.append(projectElement)
-
-  });
-
-
+    displayData(data);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Projekte:", error); // Fehler
+  }
 }
 
-getProjects();
+function displayData(projects) {
+  const inspirationContainer = document.createElement("div");
+  inspirationContainer.classList.add("inspiration-container");
 
-*/
+  projects.forEach((project) => {
+    const template = `
+ <div class="inspiration">
+  <h3>${project.title}</h3>
+
+  <div class="thumbnails-slider">
+    <div class="thumbnails-container">
+      ${project.thumbnails
+        .map(
+          (item) => `<img
+        class="thumbnails"
+        src="${item}"
+        alt="Eowyn Kleid"
+      />`
+        )
+        .join("")}
+    </div>
+  </div>
+
+  <div class="buttons-container-projects">
+    <button class="previous-thumbnail"><</button>
+    <button class="next-thumbnail">></button>
+  </div>
+
+  <p class="project-details">${project.use}</p>
+
+  <p class="project-year">${project.year}</p>
+
+  <p class="project-description">${project.body}</p>
+
+  <div class="material-box">
+    <p class=material-title>Material:</p>
+    ${project.material
+      .map(
+        (item) => `
+    <li class="material-list">${item}</li>
+    `
+      )
+      .join("")}
+  </div>
+</div>
+     `;
+    // inner HTML template in container einfügen
+
+    inspirationContainer.innerHTML += template;
+  });
+
+  // buttons und slider-container hinzufügen
+
+  inspirationContainer.querySelectorAll(".inspiration").forEach((project) => {
+    const nextThumbnail = project.querySelector(".next-thumbnail");
+    const previousThumbnail = project.querySelector(".previous-thumbnail");
+    const thumbnailSlider = project.querySelector(".thumbnails-container");
+
+    // THUMBNAIL IMAGES RIGHT AND LEFT FUNCTION
+
+    nextThumbnail.addEventListener("click", function () {
+      const thumbnailSlides = thumbnailSlider.querySelectorAll(".thumbnails");
+      thumbnailSlider.appendChild(thumbnailSlides[0]);
+    });
+
+    previousThumbnail.addEventListener("click", function () {
+      const thumbnailSlides = thumbnailSlider.querySelectorAll(".thumbnails");
+      thumbnailSlider.prepend(thumbnailSlides[thumbnailSlides.length - 1]);
+    });
+  });
+
+  // container in seite einfügen
+
+  document.querySelector(".inspiration-cards-container").innerText = "";
+  document
+    .querySelector(".inspiration-cards-container")
+    .appendChild(inspirationContainer);
+}
 
 /**
- * PROJECT CARDS
- */
+ * BACKUP PROJECT CARDS
 
-// change inspiration to project in case this name is used *****
 
 getInspirationData();
 
@@ -83,4 +134,4 @@ function displayData(inspirations) {
   document
     .querySelector(".inspiration-cards-container")
     .appendChild(inspirationContainer);
-}
+} */

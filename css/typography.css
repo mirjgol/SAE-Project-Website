@@ -94,3 +94,19 @@ button {
 .error-message {
   font-family: var(--main-text-font-family);
 }
+
+/* *********************************
+  PROJEKTE
+  ************************************ */
+.project-details {
+  font-size: clamp(2rem, 6.25vw, 2.5rem);
+}
+
+.previous-thumbnail,
+.next-thumbnail {
+  font-size: 2.5rem;
+}
+
+.material-title {
+  font-family: var(--bold-font-family);
+}
