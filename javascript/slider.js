@@ -18,21 +18,48 @@ let currentSlide = allSlides.length - allSlides.length + 1;
 
 // function move the slides to the right (moves first slide to end of slider)
 
-function moveRight() {
-  //get all slides
-  const allSlides = getAllSlides();
-  slider.append(allSlides[0]); // Move first slide to the end
-  changeCurrentSlide("right"); //(direction)
-  updateTitle();
-  resetAutoSlide();
-}
+let isSliding = false;
 
 function moveLeft() {
+  if (isSliding) return;
+  isSliding = true;
+
   const allSlides = getAllSlides();
-  slider.prepend(allSlides[allSlides.length - 1]); // Move last slide to the beginning
-  changeCurrentSlide("left");
-  updateTitle();
-  resetAutoSlide();
+  const lastSlide = allSlides[allSlides.length - 1];
+
+  slider.prepend(lastSlide);
+  slider.style.transition = "none";
+  slider.style.transform = "translateX(-100%)";
+
+  setTimeout(() => {
+    slider.style.transition = "transform 0.2s ease";
+    slider.style.transform = "translateX(0)";
+  });
+
+  setTimeout(() => {
+    changeCurrentSlide("left");
+    updateTitle();
+    isSliding = false;
+  }, 200);
+}
+
+function moveRight() {
+  if (isSliding) return;
+  isSliding = true;
+
+  slider.style.transition = "transform 0.5s ease";
+  slider.style.transform = "translateX(-100%)";
+
+  setTimeout(() => {
+    const allSlides = getAllSlides();
+    slider.append(allSlides[0]);
+    slider.style.transition = "none";
+    slider.style.transform = "translateX(0)";
+
+    changeCurrentSlide("right");
+    updateTitle();
+    isSliding = false;
+  }, 200);
 }
 
 function changeCurrentSlide(direction) {
@@ -45,10 +72,11 @@ function changeCurrentSlide(direction) {
   }
 }
 
+//funktion füge alt text als title hinzu
+
 function updateTitle() {
-  const allSlides = getAllSlides();
-  const currentSlideElement = allSlides[0];
-  const title = allSlides[0].querySelector(".slider-img").alt;
+  const currentSlideElement = slider.querySelector(".slide:last-child"); // last child, weil die erste angezeigte slide die letzte ist
+  const title = currentSlideElement.querySelector(".slider-img").alt;
   document.querySelector(".slides-title").innerText = title;
 }
 
@@ -94,6 +122,5 @@ function resetAutoSlide() {
 }
 
 // wenn seite ladet, autoslide starten
-
-startAutoSlide();
 updateTitle();
+startAutoSlide();

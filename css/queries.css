@@ -368,8 +368,8 @@
   }
 
   .contact-form-img-desktop {
-    max-height: 100%;
-    width: auto;
+    width: 10%;
+    height: auto;
     box-shadow: 1rem 0.5rem 5rem 0rem grey inset;
   }
 
@@ -382,6 +382,7 @@
   }
 
   .contact-form-img-box-desktop {
+    width: 100%;
     height: auto;
   }
 

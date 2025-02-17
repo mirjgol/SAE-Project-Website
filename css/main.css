@@ -293,6 +293,9 @@ SLIDER SECTION
 }
 
 .img-slider-container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -306,7 +309,7 @@ SLIDER SECTION
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: opacity 0.8s ease;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .slider-img {
@@ -346,10 +349,16 @@ SLIDER SECTION
   color: var(--darkest-color-tone);
 }
 
-i .fa-left-long,
-.fa-solid:hover {
-  background-color: var(--gold);
+.left-animmation {
+  transform: translateX(-100%);
+  opacity: 0;
 }
+
+.right-animation {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 /* *********************************
   CONTACT FORM 
   ************************************ */
@@ -376,6 +385,10 @@ i .fa-left-long,
 }
 
 .form-input {
+  padding: 0.4rem;
+}
+
+#anrede {
   padding: 0.4rem;
 }
 
