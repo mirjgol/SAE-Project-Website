@@ -108,10 +108,10 @@ function stopAutoSlide() {
 document.querySelector(".play-pause").addEventListener("click", function () {
   if (autoSlideIsActive) {
     stopAutoSlide();
-    this.innerText = "Play";
+    this.innerHTML = "&#9654";
   } else {
     startAutoSlide();
-    this.innerText = "Pause";
+    this.innerHTML = "&#9632";
   }
 });
 // funkttion die timer beim klicken zurücksetzt

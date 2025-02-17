@@ -50,15 +50,6 @@ button {
   justify-content: center;
 }
 
-.project-section,
-.kontakt-section,
-.galerie-section,
-.angebot-section {
-  background-color: var(--lightest-color-tone);
-  width: 100vw;
-  margin-top: 9rem;
-}
-
 /* *********************************
   HEADER
   ************************************ */
@@ -280,33 +271,34 @@ SLIDER SECTION
 .img-slider-section {
   background-color: var(--soft-green);
   margin-top: var(--section-margin-top);
-  max-width: 100%;
-  height: auto;
+  max-width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .slides-title {
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 
 .img-slider-container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   position: relative;
   width: 100%;
   max-width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide {
-  padding: 1rem;
+  padding-top: clamp(1rem, 3.1vw, 2rem);
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   overflow: hidden;
   transition: transform 0.5s, opacity 0.5s;
@@ -325,7 +317,8 @@ SLIDER SECTION
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem 0;
+  position: absolute;
+  top: 62%;
 }
 
 .play-pause,

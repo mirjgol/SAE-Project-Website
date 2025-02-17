@@ -8,6 +8,7 @@
     <link href="css/queries.css" rel="stylesheet" />
     <title>Kontakt</title>
     <script src="javascript/hamburger-menu.js" defer></script>
+    <script src="javascript/form-validation.js" defer></script>
 
     <link rel="icon" type="image/x-icon" href="images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,16 +68,30 @@
         <form class="contact-form">
           <div class="title-box">
             <h2 class="form-title">Kontaktiere mich</h2>
-            <picture class="contact-form-img-box"
+            <picture class="contact-form-img-box-mobile"
               ><source
                 src="images/slider-dress-grey-hood.webp"
                 type="image/webp"
               />
 
               <img
-                class="contact-form-img"
+                class="contact-form-img-mobile"
                 loading="lazy"
                 src="images/slider-dress-grey-hood.JPG"
+                alt="Graues Kleid mit Kapuze"
+              />
+            </picture>
+
+            <picture class="contact-form-img-box-desktop"
+              ><source
+                src="images/slider-dress-grey-hood-desktop.JPG"
+                type="image/webp"
+              />
+
+              <img
+                class="contact-form-img-desktop"
+                loading="lazy"
+                src="images/slider-dress-grey-hood-desktop.JPG"
                 alt="Graues Kleid mit Kapuze"
               />
             </picture>
@@ -87,7 +102,9 @@
               <label class="form-label" for="anrede">Anrede</label>
 
               <select id="anrede" name="anrede" class="focusout">
-                <option value="choose" class="focusout">Anrede wählen</option>
+                <option value="choose" class="form-input focusout">
+                  Anrede wählen
+                </option>
                 <option value="male">Herr</option>
                 <option value="female">Frau</option>
                 <option value="neutral">Neutrale Anrede</option>
@@ -97,7 +114,7 @@
             <div class="first-name-box">
               <label class="form-label" for="firstName">Vorname </label>
               <input
-                class="form-input first-name focusout"
+                class="form-input first-name focusout focusin"
                 type="text"
                 name="firstName"
                 id="firstName"

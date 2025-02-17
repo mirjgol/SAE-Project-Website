@@ -113,6 +113,14 @@
   }
 
   /* *********************************
+     SLIDER SECTION min-width: 480px
+    ************************************ */
+
+  .img-slider-container {
+    width: 70%;
+  }
+
+  /* *********************************
      SECTIONS min-width: 480px
     ************************************ */
   .project-section,
@@ -405,6 +413,14 @@
   .inspiration-container {
     padding: 8rem 8rem;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* *********************************
+     SLIDER SECTION min-width: 1025px
+    ************************************ */
+
+  .img-slider-container {
+    width: 50%;
   }
 }
 

@@ -84,8 +84,11 @@ button {
 /* *********************************
   FORM
   ************************************ */
-.form-input {
+.form-input,
+select,
+.form-option {
   font-family: var(--main-text-font-family);
+  font-size: 1.6rem;
 }
 .form-label {
   font-weight: bold;
