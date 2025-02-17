@@ -31,6 +31,14 @@
   .inspiration-container {
     padding: 4rem 4rem;
   }
+
+  /* *********************************
+    KONTAKT min-width: 390px
+    ************************************ */
+
+  .form-section {
+    margin: 2rem;
+  }
 }
 
 @media (min-width: 480px) {
@@ -55,10 +63,6 @@
 
   .hamburger-menu span {
     height: 0.3rem;
-  }
-
-  .off-screen-link {
-    font-size: 1.8rem;
   }
 
   .off-screen-navigation {
@@ -88,7 +92,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 7%;
+    left: 15%;
     top: 25%;
     color: var(--medium-green);
   }
@@ -126,7 +130,8 @@
   .project-section,
   .kontakt-section,
   .galerie-section,
-  .angebot-section {
+  .angebot-section,
+  .form-section {
     margin-top: 12rem;
   }
 }
@@ -147,6 +152,17 @@
 
   .fokus-fina-span-desktop {
     margin-top: 2rem;
+  }
+
+  /* *********************************
+    KONTAKT min-width: 534px
+    ************************************ */
+
+  .contact-form {
+    padding: 4rem;
+  }
+  .form-section {
+    margin: 4rem;
   }
 }
 
@@ -332,15 +348,10 @@
       ************************************ */
 
   .form-section {
-    margin: 0 10rem 0 10rem;
-  }
-
-  .form-title {
-    font-size: 3.6rem;
-  }
-
-  body {
-    font-size: 1.8rem;
+    margin: 4rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--soft-green);
   }
 
   .form-button {
@@ -358,7 +369,6 @@
   }
 
   .title-box {
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -376,8 +386,12 @@
   }
 
   .contact-form-img-desktop {
-    width: 10%;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    max-width: 100%;
     height: auto;
+    border-radius: 1rem;
     box-shadow: 1rem 0.5rem 5rem 0rem grey inset;
   }
 
@@ -390,8 +404,7 @@
   }
 
   .contact-form-img-box-desktop {
-    width: 100%;
-    height: auto;
+    display: flex;
   }
 
   .anrede-box,
@@ -406,6 +419,10 @@
 
 /* big landscape tablets, laptops and desktops */
 @media (min-width: 1025px) {
+  .site-title {
+    margin-top: 14rem;
+  }
+
   /* *********************************
     PROJECTS min-width: 1025px
     ************************************ */
@@ -421,6 +438,15 @@
 
   .img-slider-container {
     width: 50%;
+  }
+
+  /* *********************************
+    CONTACT FORM min-width: 1025px
+   ************************************ */
+
+  .form-section {
+    margin: 0;
+    padding: 7rem;
   }
 }
 

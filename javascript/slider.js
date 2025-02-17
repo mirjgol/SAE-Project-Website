@@ -111,7 +111,7 @@ document.querySelector(".play-pause").addEventListener("click", function () {
     this.innerHTML = "&#9654";
   } else {
     startAutoSlide();
-    this.innerHTML = "&#9632";
+    this.innerText = "II";
   }
 });
 // funkttion die timer beim klicken zurücksetzt

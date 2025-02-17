@@ -31,7 +31,7 @@ const validationRules = {
       : "",
 
   //HAUSNUMMER
-  houseNumber: (value) => (!value ? "Hausnummber eingeben" : ""),
+  houseNumber: (value) => (!value ? "Nr. eingeben" : ""),
 
   //PLZ
   plz: (value) =>
@@ -60,9 +60,9 @@ const validationRules = {
   //MESSAGE
   message: (value) =>
     !value
-      ? "darf nicht leer sein"
+      ? "Nachricht eingeben"
       : value.length < 30
-      ? "mindestens 30 Zeichen"
+      ? "muss mindestens 30 Zeichen enthalten"
       : "",
 };
 
@@ -182,7 +182,7 @@ function validateForm(event) {
     validationErrors.firstName = "Vorname eingeben";
   } else if (/\d/.test(data.firstName)) {
     // "\d" Regex für Zahlen
-    validationErrors.firstName = "Zahlen sind nicht erlaubt";
+    validationErrors.firstName = "Zahlen nicht erlaubt";
   }
 
   // validate NACHNAME
@@ -202,7 +202,7 @@ function validateForm(event) {
 
   // validate HAUSNUMMER
   if (!data.houseNumber) {
-    validationErrors.houseNumber = "Hausnummer eingeben";
+    validationErrors.houseNumber = "Nr. eingeben";
   }
 
   // validate PLZ
@@ -231,9 +231,9 @@ function validateForm(event) {
 
   // validate MESSAGE
   if (!data.message) {
-    validationErrors.message = "darf nicht leer sein";
+    validationErrors.message = "Nachricht eingeben";
   } else if (data.message.length < 30) {
-    validationErrors.message = "mindestens 30 Zeichen";
+    validationErrors.message = "muss mindestens 30 Zeichen enthalten";
   }
 
   //if there are no errors, log the data to the console

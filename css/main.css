@@ -48,6 +48,7 @@ button {
   color: var(--darkest-color-tone);
   display: flex;
   justify-content: center;
+  margin-top: 8rem;
 }
 
 /* *********************************
@@ -270,9 +271,9 @@ SLIDER SECTION
 ************************************ */
 .img-slider-section {
   background-color: var(--soft-green);
-  margin-top: var(--section-margin-top);
+  margin: var(--section-margin-top) 0;
   max-width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,14 +319,17 @@ SLIDER SECTION
   justify-content: center;
   gap: 2rem;
   position: absolute;
-  top: 62%;
+  top: 83%;
+  background-color: #e9e0d292;
+  border-radius: var(--main-border-radius);
+  padding: 0.5rem;
 }
 
 .play-pause,
 .right,
 .left {
   background-color: var(--lightest-color-tone);
-  padding: 1rem;
+  padding: clamp(1rem, 2.7vw, 2rem);
   color: var(--darkest-color-tone);
   border: solid 1px var(--darkest-color-tone);
   border-radius: 50%;
@@ -355,6 +359,18 @@ SLIDER SECTION
 /* *********************************
   CONTACT FORM 
   ************************************ */
+.form-section {
+  margin-top: var(--section-margin-top);
+  padding: 3rem;
+  margin: 0.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--soft-green);
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+}
 
 .anrede-box,
 .first-name-box,
@@ -407,13 +423,6 @@ SLIDER SECTION
   width: 80%;
 }
 
-.form-section {
-  margin-top: var(--section-margin-top);
-  padding: 3rem;
-  border-radius: 1.5rem;
-  background-color: var(--soft-green);
-}
-
 .contact-form-img-box-mobile {
   width: 5rem;
   height: auto;
@@ -423,6 +432,7 @@ SLIDER SECTION
 }
 
 .contact-form-img-mobile {
+  margin-bottom: 1rem;
   padding: 2rem;
   max-width: 100%;
   height: auto;
@@ -598,3 +608,8 @@ SLIDER SECTION
     **********************************
     **********************************
     ********************************** */
+
+.contact-address-box {
+  display: flex;
+  flex-direction: column;
+}

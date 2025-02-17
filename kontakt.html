@@ -7,7 +7,10 @@
     <link href="css/typography.css" rel="stylesheet" />
     <link href="css/queries.css" rel="stylesheet" />
     <title>Kontakt</title>
+    <script src="javascript/animations.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="javascript/hamburger-menu.js" defer></script>
+
     <script src="javascript/form-validation.js" defer></script>
 
     <link rel="icon" type="image/x-icon" href="images/logo.svg" />
@@ -59,10 +62,16 @@
       <div class="kontakt-box">
         <h2>So kannst du mich kontaktieren:</h2>
         <h3>Kontaktformular</h3>
-        <p>Sende mir eine anfrage über das Kontaktformular.</p>
+        <p class="fliesstext">
+          Sende mir eine anfrage über das Kontaktformular.
+        </p>
         <h3>Anruf</h3>
-        <p>Rufe mich an unter der folgenden Nummer:</p>
-        <p>Telefonnummer mit icon</p>
+        <p class="fliesstext">Rufe mich an unter der folgenden Nummer:</p>
+        <p class="fliesstext">Telefonnummer</p>
+        <address class="contact-address-box fliesstext">
+          <span>Fokus Fina Nähatelier</span><span>Speicherstrasse 60</span
+          ><span>9000 St.Gallen</span>
+        </address>
       </div>
       <section class="form-section">
         <form class="contact-form">

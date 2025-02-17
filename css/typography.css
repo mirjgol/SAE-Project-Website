@@ -37,6 +37,10 @@ body {
 button {
   font-family: var(--bold-font-family);
 }
+.box-form-elements,
+.fliesstext {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+}
 
 /* *********************************
   HEADER
@@ -78,12 +82,25 @@ button {
 
 .off-screen-link {
   font-family: "Merienda-Regular", sans-serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+}
+
+/* *********************************
+  SLIDER
+  ************************************ */
+
+.slides-title {
+  font-size: clamp(2rem, 6.25vw, 3rem);
 }
 
 /* *********************************
   FORM
   ************************************ */
+
+.form-title {
+  font-size: clamp(2.4rem, 7.5vw, 5rem);
+}
+
 .form-input,
 select,
 .form-option {
