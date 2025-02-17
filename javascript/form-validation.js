@@ -4,7 +4,7 @@
 
 const validationRules = {
   //ANREDE
-  anrede: (value) => (value === "choose" ? "Bitte Anrede auswählen." : ""),
+  anrede: (value) => (value === "choose" ? "Anrede auswählen" : ""),
 
   //VORNAME
   firstName: (value) =>
@@ -43,13 +43,17 @@ const validationRules = {
 
   //ORT
   location: (value) =>
-    !value ? "Wohnort eingeben" : value.length < 2 ? "Wohnort ist zu kurz" : "",
+    !value
+      ? "Wohnort eingeben"
+      : value.length < 2
+      ? "muss mindestens 2 Zeichen enthalten  "
+      : "",
 
   //EMAIL
   email: (value) =>
     !value
       ? "E-mail Adresse eingeben"
-      : !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)
+      : !/^[^s@]+@[^s@]+.[^s@]+$/.test(value)
       ? "Ungültige E-Mail Adresse"
       : "",
 
@@ -58,7 +62,7 @@ const validationRules = {
     !value
       ? "darf nicht leer sein"
       : value.length < 30
-      ? "Nachricht mindestens 30 Zeichen"
+      ? "mindestens 30 Zeichen"
       : "",
 };
 
@@ -170,7 +174,7 @@ function validateForm(event) {
 
   // validate ANREDE
   if (data.anrede === "choose") {
-    validationErrors.anrede = "Bitte Anrede auswählen.";
+    validationErrors.anrede = "Anrede auswählen";
   }
 
   // validate VORNAME
@@ -192,7 +196,7 @@ function validateForm(event) {
   // validate STRASSE
   if (!data.streetName) {
     validationErrors.streetName = "Strassenname eingeben";
-  } else if (data.streetName.length <= 3) {
+  } else if (data.streetName.length < 3) {
     validationErrors.streetName = "muss mindestens 3 Zeichen enthalten";
   }
 
@@ -213,7 +217,7 @@ function validateForm(event) {
   if (!data.location) {
     validationErrors.location = "Wohnort eingeben.";
   } else if (data.location.length < 2) {
-    validationErrors.location = "Wohnort ist zu kurz";
+    validationErrors.location = "muss mindestens 2 Zeichen enthalten";
   }
 
   // validate EMAIL
@@ -229,7 +233,7 @@ function validateForm(event) {
   if (!data.message) {
     validationErrors.message = "darf nicht leer sein";
   } else if (data.message.length < 30) {
-    validationErrors.message = "Nachricht zu kurz";
+    validationErrors.message = "mindestens 30 Zeichen";
   }
 
   //if there are no errors, log the data to the console
@@ -282,3 +286,19 @@ function clearErrors() {
     element.remove();
   });
 }
+
+// *****EXPLANATION OF EMAIL REGEX:****
+
+// ^       -->        start of string
+
+// [^s@]+  -->        one ore more characters that are not whitespace or @
+
+// @       -->        must contain @ symbol
+
+// [^s@]+  -->        one ore more characters that are not whitespace or @
+
+// \.      -->        must have a dot
+
+// [^s@]+  -->        one ore more characters that are not whitespace or @
+
+// $       -->        end of string
