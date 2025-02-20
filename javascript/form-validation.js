@@ -105,6 +105,8 @@ function validateInputFields(event) {
   }
 }
 
+//*** Funktion welches das Select Field einzeln validiert (bei focusin nächstes Feld(Vorname)) */
+
 function validateSelectField(event) {
   const targetedSelectField = document.querySelector("#anrede"); // targets das Feld welches focusin auslöst
 

@@ -64,3 +64,18 @@ tlMobile.fromTo(
     duration: 2,
   }
 );
+
+/*/ GALERIE STAGGER ANIMATION
+
+gsap.to(".galerie-img-box", {
+  duration: 0.5,
+  scale: 0.1,
+  axis: null,
+  ease: "power1.inOut",
+  repeat: 1,
+  yoyo: true,
+  stagger: {
+    from: "edges",
+    amount: 1.5,
+  },
+});*/

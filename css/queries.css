@@ -36,7 +36,7 @@
     KONTAKT min-width: 390px
     ************************************ */
 
-  .form-section {
+  .form-container {
     margin: 2rem;
   }
 }
@@ -131,7 +131,7 @@
   .kontakt-section,
   .galerie-section,
   .angebot-section,
-  .form-section {
+  .form-container {
     margin-top: 12rem;
   }
 }
@@ -161,7 +161,7 @@
   .contact-form {
     padding: 4rem;
   }
-  .form-section {
+  .form-container {
     margin: 4rem;
   }
 }
@@ -347,7 +347,7 @@
      CONTACT FORM min-width: 801px
       ************************************ */
 
-  .form-section {
+  .form-container {
     margin: 4rem;
     padding: 1rem;
     border-radius: 1.5rem;
@@ -444,7 +444,7 @@
     CONTACT FORM min-width: 1025px
    ************************************ */
 
-  .form-section {
+  .form-container {
     margin: 0;
     padding: 7rem;
   }

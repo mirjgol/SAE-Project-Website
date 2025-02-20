@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* *********************************
   IMPORTS
   ************************************ */
@@ -148,7 +141,7 @@ nav {
   height: 100vh;
   width: 100%;
   position: absolute;
-  right: -81rem;
+  right: -100vw;
   top: 6rem;
   display: flex;
   flex-direction: column;
@@ -357,9 +350,9 @@ SLIDER SECTION
 }
 
 /* *********************************
-  CONTACT FORM 
+  CONTACT SECTION
   ************************************ */
-.form-section {
+.form-container {
   margin-top: var(--section-margin-top);
   padding: 3rem;
   margin: 0.5rem;
@@ -497,10 +490,8 @@ SLIDER SECTION
 }
 
 .thumbnails-container {
-  display: block;
   width: 100%;
   height: 100%;
-  float: left;
 }
 
 .thumbnails {
@@ -535,7 +526,6 @@ SLIDER SECTION
   display: flex;
   justify-content: center;
   background-color: var(--lightest-color-tone);
-  display: flex;
   color: var(--darkest-color-tone);
   padding: 1rem;
 }
@@ -612,4 +602,14 @@ SLIDER SECTION
 .contact-address-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.kontakt-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--section-margin-top) 0;
+  gap: 2rem;
+  padding: 1rem;
 }
