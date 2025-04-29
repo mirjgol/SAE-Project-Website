@@ -115,5 +115,14 @@
     "use": "Sitzunterlage",
     "year": "2024",
     "post_id": 8
+  },
+  {
+    "title": "Schlittelkissen",
+    "body": "Die Kissen habe ich für einen Schlitteltag genäht. Für jeden der beim Ausflug dabei war, habe ich ein passendes Motiv aufs Kissen genäht. Die Kissen können am Schlitten befestigt werden.",
+    "thumbnails": ["images/pillow-schlitteln.webp"],
+    "material": ["Wolle", "Regenstoff", "Leder", "Volumenvliess", "D-Ring"],
+    "use": "Sitzunterlage",
+    "year": "2024",
+    "post_id": 8
   }
 ]

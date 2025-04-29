@@ -23,41 +23,25 @@
   <body>
     <!-- *** HEADER *** -->
 
-    <header class="header">
-      <nav>
-        <a class="logo-container" href="index.html">
-          <img
-            class="logo"
-            loading="lazy"
-            src="images/logo.svg"
-            alt="Logo Fokus Fina"
-        /></a>
-
-        <div class="hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-
-      <div class="off-screen-navigation">
-        <ul class="off-screen-menu">
-          <li><a class="off-screen-link" href="index.html">HOME</a></li>
-
-          <li><a class="off-screen-link" href="angebot.html">ANGEBOT</a></li>
-
-          <li><a class="off-screen-link" href="projekte.html">PROJEKTE</a></li>
-
-          <li><a class="off-screen-link" href="galerie.html">GALERIE</a></li>
-
-          <li><a class="off-screen-link" href="kontakt.html">KONTAKT</a></li>
-        </ul>
-      </div>
-    </header>
+    <?php include('partials/header.php'); ?>	
 
     <section class="angebot-section">
       <h1 class="site-title">Angebot</h1>
       <p>...Wird gerade erneuert...</p>
     </section>
+    <footer class="footer">
+      <p>...wird gerade noch gestylt...</p>
+      <div class="footer-box">
+        <div class="footer-links-box">
+          <a class="footer-link" href=""><small>Impressum</small></a>
+          <a class="footer-link" href=""><small>AGB</small></a>
+          <a class="footer-link" href=""><small>Datenschutz</small></a>
+        </div>
+        <a aria-label="Instagram-Link" class="footer-icon"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <small class="copyright-box">&copy 2025 Mirjam Goldiger</small>
+    </footer>
   </body>
 </html>

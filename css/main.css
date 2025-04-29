@@ -176,6 +176,12 @@ nav {
   color: var(--darkest-color-tone);
 }
 
+a.off-screen-link.registration-button {
+  border-radius: var(--main-border-radius);
+  padding: 1rem;
+  background-color: var(--lightest-color-tone);
+}
+
 /*  *********************************
     **********************************
     **********************************
@@ -612,4 +618,21 @@ SLIDER SECTION
   margin: var(--section-margin-top) 0;
   gap: 2rem;
   padding: 1rem;
+}
+
+/*  *********************************
+    **********************************
+    **********************************
+    REGISTRATION
+    **********************************
+    **********************************
+    ********************************** */
+form.registration-form {
+  background-color: var(--lightest-color-tone);
+  margin-top: var(--header-height);
+  padding: 10rem 20rem;
+}
+
+.pre-margin {
+  margin-top: var(--header-height);
 }
