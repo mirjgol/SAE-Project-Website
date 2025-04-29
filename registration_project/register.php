@@ -1,12 +1,19 @@
 <?php
 
+session_start();
+
+require '../includes/db.php';
+
 $hasErrors = false; // Fehlerstatus
 $errorMessages = array();
+$success = '';
 
 // leere variablen für form labels
+$id = 0;
 $username = '';
 $email = '';
 $password = '';
+$confirm_password = '';
 $gender = '';
 $country = '';
 $agb = '';
@@ -20,6 +27,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $username = strip_tags($_POST['username']);
   $email = strip_tags($_POST['email']);
   $password = $_POST['password']; // passwort nicht verändern
+  $confirm_password = $_POST['confirm-password']; // passwort nicht verändern
   $gender = strip_tags($_POST['gender']);
   $country = strip_tags($_POST['country']);
  
@@ -42,6 +50,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
   if (empty($_POST['password'])) {
     $errorMessages['password'] [] = 'Bitte Passwort eingeben.';
+    $hasErrors = true;
+  }
+  if (empty($_POST['confirm_password'])) {
+    $errorMessages['confirm_password'] [] = 'Bitte Passwort nochmals eingeben.';
     $hasErrors = true;
   }
 
@@ -97,12 +109,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 
  } elseif (!preg_match('/[0-9]/', $password)){
-  $errorMessages[password][] = 'Das Passwort muss eine Zahl enthalten';
+  $errorMessages['password'][] = 'Das Passwort muss eine Zahl enthalten';
   $hasErrors = true; 
  
 
  } elseif (!preg_match('/[\W]/', $password)){
-  $errorMessages[password][] = 'Das Passwort muss ein Sonderzeichen enthalten';
+  $errorMessages['password'][] = 'Das Passwort muss ein Sonderzeichen enthalten';
   $hasErrors = true; 
 
 
@@ -111,11 +123,42 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $hasErrors = true; 
 }
 
+if ($confirm_password !== $password){
+  $errorMessages['password'][] = 'Passwort nicht identisch';
+  $hasErrors = true; 
+
+ }
+
+
 // Ergebnis ausgeben, wenn keine Validierungsfehler entstanden sind
 
 if($hasErrors == false) {
   // Verarbeitung kann hier beginnen
-  echo 'Bereit zum verschicken';
+  if ($hasErrors == false) {
+    // Passwort hashen
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert mit PDO
+    $stmt = $pdo->prepare("INSERT INTO users (username, email, password, gender, country, agb) VALUES (?, ?, ?, ?, ?, ?)");
+
+    try {
+        $stmt->execute([
+            $username,
+            $email,
+            $hashed_password,
+            $gender,
+            $country,
+            $agb
+        ]);
+
+        $success = "Registrierung erfolgreich!";
+        // Optional: Weiterleitung
+        // header("Location: login.php"); exit;
+
+    } catch (PDOException $e) {
+        $errorMessages['database'][] = "Fehler beim Speichern in der Datenbank: " . $e->getMessage();
+    }
+}
 }
 
 }
@@ -159,17 +202,18 @@ echo '</pre>';
 </head>
 
 <body>
-  <!-- *** HEADER *** -->
+  <!-- *** HEADER *** --> 
 <?php include('../partials/header.php'); ?>	
 <main>
 
 <section class="registration-section">
 
 <h1 class="site-title">Registration</h1>
+
 <form class="registration-form" action="register.php" method="POST"> 
 
   <div class="row mb-3">
-    <label for="username" class="col-sm-2 col-form-label" name="username">Benutzername*
+    <label for="username" class="col-sm-2 col-form-label" >Benutzername*
     </label>
     <div class="col-sm-10">
       <input type="text" class="form-control form-control-lg <?php echo isset($errorMessages['username']) ? 'is-invalid' : ''; ?>" id="username" name="username" value="<?php echo htmlspecialchars($username);?>">
